@@ -1,0 +1,2789 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+67 (git sha1 UNKNOWN, ccache clang 11.0.0-2~ubuntu20.04.1 -Os -flto -flto)
+
+
+-- Executing script file `top.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: top.il
+
+2. Executing SYNTH_ICE40 pass.
+
+2.1. Executing Verilog-2005 frontend: /share/ice40/cells_sim.v
+Parsing Verilog input from `/share/ice40/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Generating RTLIL representation for module `\ICESTORM_RAM'.
+Successfully finished Verilog frontend.
+
+2.2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \pin_led_2
+Used module:     \pin_led_1
+Used module:     \pin_led_0
+Used module:     \pin_bldc_0__sensor2
+Used module:     \pin_bldc_0__sensor1
+Used module:     \pin_bldc_0__sensor0
+Used module:     \pin_bldc_0__wH
+Used module:     \pin_bldc_0__wL
+Used module:     \pin_bldc_0__vH
+Used module:     \pin_bldc_0__vL
+Used module:     \pin_bldc_0__uH
+Used module:     \pin_bldc_0__uL
+Used module:     \pin_stepper_2__limit
+Used module:     \pin_stepper_2__dir
+Used module:     \pin_stepper_2__step
+Used module:     \pin_stepper_1__limit
+Used module:     \pin_stepper_1__dir
+Used module:     \pin_stepper_1__step
+Used module:     \pin_stepper_0__limit
+Used module:     \pin_stepper_0__dir
+Used module:     \pin_stepper_0__step
+Used module:     \pin_laserscanner_0__photodiode
+Used module:     \pin_laserscanner_0__laser1
+Used module:     \pin_laserscanner_0__laser0
+Used module:     \pin_debug_spi_0__cs
+Used module:     \pin_debug_spi_0__sdo
+Used module:     \pin_debug_spi_0__sdi
+Used module:     \pin_debug_spi_0__sck
+Used module:     \cd_sync
+Used module:     \U$$2
+Used module:     \U$$1
+Used module:     \U$$0
+Used module:     \prism_driver
+Used module:     \laserhead
+Used module:     \polynomal
+Used module:     \parser
+Used module:         \fifo
+Used module:         \interf
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \pin_led_2
+Used module:     \pin_led_1
+Used module:     \pin_led_0
+Used module:     \pin_bldc_0__sensor2
+Used module:     \pin_bldc_0__sensor1
+Used module:     \pin_bldc_0__sensor0
+Used module:     \pin_bldc_0__wH
+Used module:     \pin_bldc_0__wL
+Used module:     \pin_bldc_0__vH
+Used module:     \pin_bldc_0__vL
+Used module:     \pin_bldc_0__uH
+Used module:     \pin_bldc_0__uL
+Used module:     \pin_stepper_2__limit
+Used module:     \pin_stepper_2__dir
+Used module:     \pin_stepper_2__step
+Used module:     \pin_stepper_1__limit
+Used module:     \pin_stepper_1__dir
+Used module:     \pin_stepper_1__step
+Used module:     \pin_stepper_0__limit
+Used module:     \pin_stepper_0__dir
+Used module:     \pin_stepper_0__step
+Used module:     \pin_laserscanner_0__photodiode
+Used module:     \pin_laserscanner_0__laser1
+Used module:     \pin_laserscanner_0__laser0
+Used module:     \pin_debug_spi_0__cs
+Used module:     \pin_debug_spi_0__sdo
+Used module:     \pin_debug_spi_0__sdi
+Used module:     \pin_debug_spi_0__sck
+Used module:     \cd_sync
+Used module:     \U$$2
+Used module:     \U$$1
+Used module:     \U$$0
+Used module:     \prism_driver
+Used module:     \laserhead
+Used module:     \polynomal
+Used module:     \parser
+Used module:         \fifo
+Used module:         \interf
+Removed 0 unused modules.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:1386$241 in module SB_DFFNES.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:1328$234 in module SB_DFFNESS.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:1251$230 in module SB_DFFNER.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:1193$223 in module SB_DFFNESR.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:1122$220 in module SB_DFFNS.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:1072$217 in module SB_DFFNSS.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:1001$214 in module SB_DFFNR.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:951$211 in module SB_DFFNSR.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:789$203 in module SB_DFFES.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:731$196 in module SB_DFFESS.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:654$192 in module SB_DFFER.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:596$185 in module SB_DFFESR.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:525$182 in module SB_DFFS.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:475$179 in module SB_DFFSS.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:404$176 in module SB_DFFR.
+Marked 1 switch rules as full_case in process $proc$/share/ice40/cells_sim.v:354$173 in module SB_DFFSR.
+Marked 2 switch rules as full_case in process $group_53 in module top.
+Marked 1 switch rules as full_case in process $group_52 in module top.
+Marked 1 switch rules as full_case in process $group_49 in module top.
+Marked 1 switch rules as full_case in process $group_47 in module top.
+Marked 1 switch rules as full_case in process $group_46 in module top.
+Marked 1 switch rules as full_case in process $group_45 in module top.
+Marked 2 switch rules as full_case in process $group_41 in module top.
+Marked 1 switch rules as full_case in process $group_35 in module top.
+Marked 1 switch rules as full_case in process $group_33 in module top.
+Marked 1 switch rules as full_case in process $group_31 in module top.
+Marked 1 switch rules as full_case in process $group_2 in module cd_sync.
+Marked 1 switch rules as full_case in process $group_10 in module prism_driver.
+Marked 1 switch rules as full_case in process $group_9 in module prism_driver.
+Marked 1 switch rules as full_case in process $group_7 in module prism_driver.
+Marked 1 switch rules as full_case in process $group_6 in module prism_driver.
+Marked 3 switch rules as full_case in process $group_32 in module laserhead.
+Marked 1 switch rules as full_case in process $group_31 in module laserhead.
+Marked 1 switch rules as full_case in process $group_30 in module laserhead.
+Marked 1 switch rules as full_case in process $group_29 in module laserhead.
+Marked 1 switch rules as full_case in process $group_28 in module laserhead.
+Marked 2 switch rules as full_case in process $group_26 in module laserhead.
+Marked 3 switch rules as full_case in process $group_25 in module laserhead.
+Marked 1 switch rules as full_case in process $group_22 in module laserhead.
+Marked 1 switch rules as full_case in process $group_21 in module laserhead.
+Marked 3 switch rules as full_case in process $group_20 in module laserhead.
+Marked 3 switch rules as full_case in process $group_18 in module laserhead.
+Marked 2 switch rules as full_case in process $group_17 in module laserhead.
+Marked 1 switch rules as full_case in process $group_16 in module laserhead.
+Marked 1 switch rules as full_case in process $group_15 in module laserhead.
+Marked 2 switch rules as full_case in process $group_14 in module laserhead.
+Marked 1 switch rules as full_case in process $group_13 in module laserhead.
+Marked 1 switch rules as full_case in process $group_12 in module laserhead.
+Marked 3 switch rules as full_case in process $group_11 in module laserhead.
+Marked 1 switch rules as full_case in process $group_10 in module laserhead.
+Marked 5 switch rules as full_case in process $group_9 in module laserhead.
+Marked 2 switch rules as full_case in process $group_8 in module laserhead.
+Marked 1 switch rules as full_case in process $group_4 in module laserhead.
+Marked 1 switch rules as full_case in process $group_2 in module laserhead.
+Marked 1 switch rules as full_case in process $group_1 in module laserhead.
+Marked 1 switch rules as full_case in process $group_0 in module laserhead.
+Marked 1 switch rules as full_case in process $group_17 in module polynomal.
+Marked 1 switch rules as full_case in process $group_10 in module polynomal.
+Marked 1 switch rules as full_case in process $group_9 in module polynomal.
+Marked 1 switch rules as full_case in process $group_18 in module parser.
+Marked 1 switch rules as full_case in process $group_17 in module parser.
+Marked 1 switch rules as full_case in process $group_15 in module parser.
+Marked 1 switch rules as full_case in process $group_14 in module parser.
+Marked 4 switch rules as full_case in process $group_13 in module parser.
+Marked 1 switch rules as full_case in process $group_12 in module parser.
+Marked 1 switch rules as full_case in process $group_11 in module parser.
+Marked 1 switch rules as full_case in process $group_12 in module fifo.
+Marked 1 switch rules as full_case in process $group_8 in module fifo.
+Marked 1 switch rules as full_case in process $group_7 in module fifo.
+Marked 1 switch rules as full_case in process $group_4 in module fifo.
+Marked 1 switch rules as full_case in process $group_10 in module interf.
+Marked 1 switch rules as full_case in process $group_7 in module interf.
+Marked 2 switch rules as full_case in process $group_5 in module interf.
+Marked 2 switch rules as full_case in process $group_4 in module interf.
+Marked 1 switch rules as full_case in process $group_1 in module interf.
+Marked 1 switch rules as full_case in process $group_0 in module interf.
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 107 redundant assignments.
+Promoted 102 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\SB_DFFNES.$proc$/share/ice40/cells_sim.v:0$244'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESS.$proc$/share/ice40/cells_sim.v:0$240'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNER.$proc$/share/ice40/cells_sim.v:0$233'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESR.$proc$/share/ice40/cells_sim.v:0$229'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNS.$proc$/share/ice40/cells_sim.v:0$222'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSS.$proc$/share/ice40/cells_sim.v:0$219'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNR.$proc$/share/ice40/cells_sim.v:0$216'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSR.$proc$/share/ice40/cells_sim.v:0$213'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNE.$proc$/share/ice40/cells_sim.v:0$210'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFN.$proc$/share/ice40/cells_sim.v:0$208'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFES.$proc$/share/ice40/cells_sim.v:0$206'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESS.$proc$/share/ice40/cells_sim.v:0$202'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFER.$proc$/share/ice40/cells_sim.v:0$195'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESR.$proc$/share/ice40/cells_sim.v:0$191'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFS.$proc$/share/ice40/cells_sim.v:0$184'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSS.$proc$/share/ice40/cells_sim.v:0$181'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFR.$proc$/share/ice40/cells_sim.v:0$178'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSR.$proc$/share/ice40/cells_sim.v:0$175'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFE.$proc$/share/ice40/cells_sim.v:0$172'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFF.$proc$/share/ice40/cells_sim.v:0$170'.
+  Set init value: \Q = 1'0
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \S in `\SB_DFFNES.$proc$/share/ice40/cells_sim.v:1386$241'.
+Found async reset \R in `\SB_DFFNER.$proc$/share/ice40/cells_sim.v:1251$230'.
+Found async reset \S in `\SB_DFFNS.$proc$/share/ice40/cells_sim.v:1122$220'.
+Found async reset \R in `\SB_DFFNR.$proc$/share/ice40/cells_sim.v:1001$214'.
+Found async reset \S in `\SB_DFFES.$proc$/share/ice40/cells_sim.v:789$203'.
+Found async reset \R in `\SB_DFFER.$proc$/share/ice40/cells_sim.v:654$192'.
+Found async reset \S in `\SB_DFFS.$proc$/share/ice40/cells_sim.v:525$182'.
+Found async reset \R in `\SB_DFFR.$proc$/share/ice40/cells_sim.v:404$176'.
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~408 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\SB_DFFNES.$proc$/share/ice40/cells_sim.v:0$244'.
+Creating decoders for process `\SB_DFFNES.$proc$/share/ice40/cells_sim.v:1386$241'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESS.$proc$/share/ice40/cells_sim.v:0$240'.
+Creating decoders for process `\SB_DFFNESS.$proc$/share/ice40/cells_sim.v:1328$234'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNER.$proc$/share/ice40/cells_sim.v:0$233'.
+Creating decoders for process `\SB_DFFNER.$proc$/share/ice40/cells_sim.v:1251$230'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESR.$proc$/share/ice40/cells_sim.v:0$229'.
+Creating decoders for process `\SB_DFFNESR.$proc$/share/ice40/cells_sim.v:1193$223'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNS.$proc$/share/ice40/cells_sim.v:0$222'.
+Creating decoders for process `\SB_DFFNS.$proc$/share/ice40/cells_sim.v:1122$220'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSS.$proc$/share/ice40/cells_sim.v:0$219'.
+Creating decoders for process `\SB_DFFNSS.$proc$/share/ice40/cells_sim.v:1072$217'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNR.$proc$/share/ice40/cells_sim.v:0$216'.
+Creating decoders for process `\SB_DFFNR.$proc$/share/ice40/cells_sim.v:1001$214'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSR.$proc$/share/ice40/cells_sim.v:0$213'.
+Creating decoders for process `\SB_DFFNSR.$proc$/share/ice40/cells_sim.v:951$211'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNE.$proc$/share/ice40/cells_sim.v:0$210'.
+Creating decoders for process `\SB_DFFNE.$proc$/share/ice40/cells_sim.v:906$209'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFN.$proc$/share/ice40/cells_sim.v:0$208'.
+Creating decoders for process `\SB_DFFN.$proc$/share/ice40/cells_sim.v:868$207'.
+Creating decoders for process `\SB_DFFES.$proc$/share/ice40/cells_sim.v:0$206'.
+Creating decoders for process `\SB_DFFES.$proc$/share/ice40/cells_sim.v:789$203'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESS.$proc$/share/ice40/cells_sim.v:0$202'.
+Creating decoders for process `\SB_DFFESS.$proc$/share/ice40/cells_sim.v:731$196'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFER.$proc$/share/ice40/cells_sim.v:0$195'.
+Creating decoders for process `\SB_DFFER.$proc$/share/ice40/cells_sim.v:654$192'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESR.$proc$/share/ice40/cells_sim.v:0$191'.
+Creating decoders for process `\SB_DFFESR.$proc$/share/ice40/cells_sim.v:596$185'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFS.$proc$/share/ice40/cells_sim.v:0$184'.
+Creating decoders for process `\SB_DFFS.$proc$/share/ice40/cells_sim.v:525$182'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSS.$proc$/share/ice40/cells_sim.v:0$181'.
+Creating decoders for process `\SB_DFFSS.$proc$/share/ice40/cells_sim.v:475$179'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFR.$proc$/share/ice40/cells_sim.v:0$178'.
+Creating decoders for process `\SB_DFFR.$proc$/share/ice40/cells_sim.v:404$176'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSR.$proc$/share/ice40/cells_sim.v:0$175'.
+Creating decoders for process `\SB_DFFSR.$proc$/share/ice40/cells_sim.v:354$173'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFE.$proc$/share/ice40/cells_sim.v:0$172'.
+Creating decoders for process `\SB_DFFE.$proc$/share/ice40/cells_sim.v:309$171'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFF.$proc$/share/ice40/cells_sim.v:0$170'.
+Creating decoders for process `\SB_DFF.$proc$/share/ice40/cells_sim.v:271$169'.
+Creating decoders for process `\top.$group_60'.
+Creating decoders for process `\top.$group_59'.
+Creating decoders for process `\top.$group_53'.
+     1/6: \polynomal_$signal$13$next
+     2/6: \polynomal_$signal$12$next
+     3/6: \polynomal_$signal$11$next
+     4/6: \polynomal_$signal$10$next
+     5/6: \polynomal_$signal$9$next
+     6/6: \polynomal_$signal$8$next
+Creating decoders for process `\top.$group_52'.
+     1/1: \parser_dispatcherror$next
+Creating decoders for process `\top.$group_51'.
+     1/1: \laserhead_expose_start$next
+Creating decoders for process `\top.$group_50'.
+     1/1: \read_discard$next
+Creating decoders for process `\top.$group_49'.
+     1/1: \coeffcnt$next
+Creating decoders for process `\top.$group_48'.
+     1/1: \polynomal_ticklimit$next
+Creating decoders for process `\top.$group_47'.
+     1/1: \read_en$next
+Creating decoders for process `\top.$group_46'.
+     1/1: \polynomal_start$next
+Creating decoders for process `\top.$group_45'.
+     1/1: \read_commit$next
+Creating decoders for process `\top.$group_42'.
+     1/3: \laserhead_synchronize$next
+     2/3: \enable_prism$next
+     3/3: \lasers$next
+Creating decoders for process `\top.$group_41'.
+     1/1: \dispatcher_state$next
+Creating decoders for process `\top.$group_40'.
+Creating decoders for process `\top.$group_39'.
+Creating decoders for process `\top.$group_38'.
+Creating decoders for process `\top.$group_37'.
+Creating decoders for process `\top.$group_36'.
+Creating decoders for process `\top.$group_35'.
+     1/1: \parser_$signal$2$next
+Creating decoders for process `\top.$group_34'.
+     1/1: $signal$106$next
+Creating decoders for process `\top.$group_33'.
+     1/1: \parser_$signal$1$next
+Creating decoders for process `\top.$group_32'.
+     1/1: $signal$85$next
+Creating decoders for process `\top.$group_31'.
+     1/1: \parser_$signal$next
+Creating decoders for process `\top.$group_30'.
+     1/1: $signal$next
+Creating decoders for process `\top.$group_29'.
+Creating decoders for process `\top.$group_28'.
+Creating decoders for process `\top.$group_27'.
+Creating decoders for process `\top.$group_26'.
+Creating decoders for process `\top.$group_25'.
+Creating decoders for process `\top.$group_24'.
+Creating decoders for process `\top.$group_23'.
+Creating decoders for process `\top.$group_22'.
+Creating decoders for process `\top.$group_21'.
+Creating decoders for process `\top.$group_20'.
+Creating decoders for process `\top.$group_19'.
+Creating decoders for process `\top.$group_18'.
+Creating decoders for process `\top.$group_17'.
+Creating decoders for process `\top.$group_16'.
+Creating decoders for process `\top.$group_15'.
+Creating decoders for process `\top.$group_14'.
+Creating decoders for process `\top.$group_13'.
+Creating decoders for process `\top.$group_12'.
+Creating decoders for process `\top.$group_11'.
+Creating decoders for process `\top.$group_10'.
+Creating decoders for process `\top.$group_9'.
+Creating decoders for process `\top.$group_8'.
+Creating decoders for process `\top.$group_7'.
+Creating decoders for process `\top.$group_6'.
+Creating decoders for process `\top.$group_5'.
+Creating decoders for process `\top.$group_4'.
+Creating decoders for process `\top.$group_3'.
+Creating decoders for process `\top.$group_2'.
+Creating decoders for process `\top.$group_1'.
+Creating decoders for process `\top.$group_0'.
+Creating decoders for process `\pin_led_2.$group_0'.
+Creating decoders for process `\pin_led_1.$group_0'.
+Creating decoders for process `\pin_led_0.$group_0'.
+Creating decoders for process `\pin_debug_spi_0__cs.$group_0'.
+Creating decoders for process `\cd_sync.$group_4'.
+Creating decoders for process `\cd_sync.$group_3'.
+Creating decoders for process `\cd_sync.$group_2'.
+     1/1: \timer$next
+Creating decoders for process `\cd_sync.$group_1'.
+     1/1: \ready$next
+Creating decoders for process `\cd_sync.$group_0'.
+Creating decoders for process `\U$$2.$group_2'.
+Creating decoders for process `\U$$2.$group_1'.
+Creating decoders for process `\U$$2.$group_0'.
+Creating decoders for process `\U$$1.$group_2'.
+Creating decoders for process `\U$$1.$group_1'.
+Creating decoders for process `\U$$1.$group_0'.
+Creating decoders for process `\U$$0.$group_2'.
+Creating decoders for process `\U$$0.$group_1'.
+Creating decoders for process `\U$$0.$group_0'.
+Creating decoders for process `\prism_driver.$group_16'.
+     1/1: \wH
+Creating decoders for process `\prism_driver.$group_15'.
+     1/1: \wL
+Creating decoders for process `\prism_driver.$group_14'.
+     1/1: \vH
+Creating decoders for process `\prism_driver.$group_13'.
+     1/1: \vL
+Creating decoders for process `\prism_driver.$group_12'.
+     1/1: \uH
+Creating decoders for process `\prism_driver.$group_11'.
+     1/1: \uL
+Creating decoders for process `\prism_driver.$group_10'.
+     1/1: \off$next
+Creating decoders for process `\prism_driver.$group_9'.
+     1/1: \duty$next
+Creating decoders for process `\prism_driver.$group_8'.
+     1/1: \measurement$next
+Creating decoders for process `\prism_driver.$group_7'.
+     1/1: \timer$next
+Creating decoders for process `\prism_driver.$group_6'.
+     1/1: \delay$next
+Creating decoders for process `\prism_driver.$group_5'.
+     1/1: \stateold$next
+Creating decoders for process `\prism_driver.$group_4'.
+     1/1: \statefilter$next
+Creating decoders for process `\prism_driver.$group_3'.
+     1/1: \state$next
+Creating decoders for process `\prism_driver.$group_2'.
+Creating decoders for process `\prism_driver.$group_1'.
+Creating decoders for process `\prism_driver.$group_0'.
+Creating decoders for process `\laserhead.$group_32'.
+     1/1: \read_old$next
+Creating decoders for process `\laserhead.$group_31'.
+     1/2: \write_new$next [63:1]
+     2/2: \write_new$next [0]
+Creating decoders for process `\laserhead.$group_30'.
+     1/1: \read_discard$next
+Creating decoders for process `\laserhead.$group_29'.
+     1/1: \write_commit_2$next
+Creating decoders for process `\laserhead.$group_28'.
+     1/1: \stepcnt$next
+Creating decoders for process `\laserhead.$group_27'.
+     1/1: \step$next
+Creating decoders for process `\laserhead.$group_26'.
+     1/1: \write_en_2$next
+Creating decoders for process `\laserhead.$group_25'.
+     1/1: \read_commit$next
+Creating decoders for process `\laserhead.$group_24'.
+     1/1: \stephalfperiod$next
+Creating decoders for process `\laserhead.$group_23'.
+     1/1: \dir$next
+Creating decoders for process `\laserhead.$group_22'.
+     1/1: \write_data_2$next
+Creating decoders for process `\laserhead.$group_21'.
+     1/1: \scanlinenumber$next
+Creating decoders for process `\laserhead.$group_20'.
+     1/1: \read_en$next
+Creating decoders for process `\laserhead.$group_19'.
+     1/1: \photodiode_d$next
+Creating decoders for process `\laserhead.$group_18'.
+     1/2: \lasers$next [1]
+     2/2: \lasers$next [0]
+Creating decoders for process `\laserhead.$group_17'.
+     1/1: \lasercnt$next
+Creating decoders for process `\laserhead.$group_16'.
+     1/1: \scanbit$next
+Creating decoders for process `\laserhead.$group_15'.
+     1/1: \facetcnt$next
+Creating decoders for process `\laserhead.$group_14'.
+     1/1: \readbit$next
+Creating decoders for process `\laserhead.$group_13'.
+     1/1: \enable_prism$next
+Creating decoders for process `\laserhead.$group_12'.
+     1/1: \synchronized$next
+Creating decoders for process `\laserhead.$group_11'.
+     1/1: \tickcounter$next
+Creating decoders for process `\laserhead.$group_10'.
+     1/1: \stablethresh$next
+Creating decoders for process `\laserhead.$group_9'.
+     1/1: \fsm_state$next
+Creating decoders for process `\laserhead.$group_8'.
+     1/1: \error$next
+Creating decoders for process `\laserhead.$group_7'.
+     1/1: \expose_finished$next
+Creating decoders for process `\laserhead.$group_6'.
+     1/1: \process_lines$next
+Creating decoders for process `\laserhead.$group_5'.
+     1/1: \expose_start_d$next
+Creating decoders for process `\laserhead.$group_4'.
+     1/1: \pwmcnt$next
+Creating decoders for process `\laserhead.$group_3'.
+     1/1: \pwm$next
+Creating decoders for process `\laserhead.$group_2'.
+     1/1: \photodiode_t$next
+Creating decoders for process `\laserhead.$group_1'.
+     1/1: \photodiodecnt$next
+Creating decoders for process `\laserhead.$group_0'.
+     1/1: \triggered$next
+Creating decoders for process `\polynomal.$group_18'.
+     1/1: \cntr$next
+Creating decoders for process `\polynomal.$group_17'.
+     1/1: \ticks$next
+Creating decoders for process `\polynomal.$group_16'.
+     1/1: $signal$127$next
+Creating decoders for process `\polynomal.$group_15'.
+     1/1: $signal$14$next
+Creating decoders for process `\polynomal.$group_14'.
+     1/1: $signal$92$next
+Creating decoders for process `\polynomal.$group_13'.
+     1/1: $signal$13$next
+Creating decoders for process `\polynomal.$group_12'.
+     1/1: $signal$57$next
+Creating decoders for process `\polynomal.$group_11'.
+     1/1: $signal$12$next
+Creating decoders for process `\polynomal.$group_10'.
+     1/1: \busy$next
+Creating decoders for process `\polynomal.$group_9'.
+     1/1: \polynomen_state$next
+Creating decoders for process `\polynomal.$group_8'.
+     1/1: $signal$5$next
+Creating decoders for process `\polynomal.$group_7'.
+     1/1: $signal$29$next
+Creating decoders for process `\polynomal.$group_6'.
+     1/1: $signal$3$next
+Creating decoders for process `\polynomal.$group_5'.
+     1/1: $signal$22$next
+Creating decoders for process `\polynomal.$group_4'.
+     1/1: $signal$1$next
+Creating decoders for process `\polynomal.$group_3'.
+     1/1: $signal$15$next
+Creating decoders for process `\polynomal.$group_2'.
+Creating decoders for process `\polynomal.$group_1'.
+Creating decoders for process `\polynomal.$group_0'.
+Creating decoders for process `\parser.$group_19'.
+     1/1: \fifo_write_commit$next
+Creating decoders for process `\parser.$group_18'.
+     1/1: \fifo_write_data$next
+Creating decoders for process `\parser.$group_17'.
+     1/1: \fifo_write_en$next
+Creating decoders for process `\parser.$group_16'.
+     1/1: \instruction$next
+Creating decoders for process `\parser.$group_15'.
+     1/1: \mtrcntr$next
+Creating decoders for process `\parser.$group_14'.
+     1/1: \interf_word_to_send$next
+Creating decoders for process `\parser.$group_13'.
+     1/1: \parser_state$next
+Creating decoders for process `\parser.$group_12'.
+     1/1: \error$next
+Creating decoders for process `\parser.$group_11'.
+     1/1: \wordsreceived$next
+Creating decoders for process `\parser.$group_10'.
+     1/1: \parse$next
+Creating decoders for process `\parser.$group_9'.
+     1/4: \state$next [7:3]
+     2/4: \state$next [1]
+     3/4: \state$next [0]
+     4/4: \state$next [2]
+Creating decoders for process `\parser.$group_8'.
+Creating decoders for process `\parser.$group_7'.
+Creating decoders for process `\parser.$group_6'.
+Creating decoders for process `\parser.$group_5'.
+Creating decoders for process `\parser.$group_4'.
+Creating decoders for process `\parser.$group_3'.
+Creating decoders for process `\parser.$group_2'.
+Creating decoders for process `\parser.$group_1'.
+Creating decoders for process `\parser.$group_0'.
+Creating decoders for process `\fifo.$group_13'.
+Creating decoders for process `\fifo.$group_12'.
+     1/1: \space_available
+Creating decoders for process `\fifo.$group_11'.
+Creating decoders for process `\fifo.$group_10'.
+     1/1: \committed_read_pointer$next
+Creating decoders for process `\fifo.$group_9'.
+     1/1: \current_read_pointer$next
+Creating decoders for process `\fifo.$group_8'.
+     1/1: \memory_r_addr
+Creating decoders for process `\fifo.$group_7'.
+     1/1: \next_read_pointer
+Creating decoders for process `\fifo.$group_6'.
+     1/1: \committed_write_pointer$next
+Creating decoders for process `\fifo.$group_5'.
+     1/1: \current_write_pointer$next
+Creating decoders for process `\fifo.$group_4'.
+     1/1: \next_write_pointer
+Creating decoders for process `\fifo.$group_3'.
+Creating decoders for process `\fifo.$group_2'.
+Creating decoders for process `\fifo.$group_1'.
+Creating decoders for process `\fifo.$group_0'.
+Creating decoders for process `\interf.$group_11'.
+Creating decoders for process `\interf.$group_10'.
+     1/1: \word_received$next
+Creating decoders for process `\interf.$group_9'.
+     1/1: \sdo$next
+Creating decoders for process `\interf.$group_8'.
+     1/1: \current_word$next
+Creating decoders for process `\interf.$group_7'.
+     1/1: \command$next
+Creating decoders for process `\interf.$group_6'.
+     1/1: \current_command$next
+Creating decoders for process `\interf.$group_5'.
+     1/1: \bit_count$next
+Creating decoders for process `\interf.$group_4'.
+     1/1: \fsm_state$next
+Creating decoders for process `\interf.$group_3'.
+Creating decoders for process `\interf.$group_2'.
+Creating decoders for process `\interf.$group_1'.
+     1/1: \word_complete$next
+Creating decoders for process `\interf.$group_0'.
+     1/1: \command_ready$next
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\SB_DFFNES.\Q' using process `\SB_DFFNES.$proc$/share/ice40/cells_sim.v:1386$241'.
+  created $adff cell `$procdff$1681' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESS.\Q' using process `\SB_DFFNESS.$proc$/share/ice40/cells_sim.v:1328$234'.
+  created $dff cell `$procdff$1682' with negative edge clock.
+Creating register for signal `\SB_DFFNER.\Q' using process `\SB_DFFNER.$proc$/share/ice40/cells_sim.v:1251$230'.
+  created $adff cell `$procdff$1683' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESR.\Q' using process `\SB_DFFNESR.$proc$/share/ice40/cells_sim.v:1193$223'.
+  created $dff cell `$procdff$1684' with negative edge clock.
+Creating register for signal `\SB_DFFNS.\Q' using process `\SB_DFFNS.$proc$/share/ice40/cells_sim.v:1122$220'.
+  created $adff cell `$procdff$1685' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSS.\Q' using process `\SB_DFFNSS.$proc$/share/ice40/cells_sim.v:1072$217'.
+  created $dff cell `$procdff$1686' with negative edge clock.
+Creating register for signal `\SB_DFFNR.\Q' using process `\SB_DFFNR.$proc$/share/ice40/cells_sim.v:1001$214'.
+  created $adff cell `$procdff$1687' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSR.\Q' using process `\SB_DFFNSR.$proc$/share/ice40/cells_sim.v:951$211'.
+  created $dff cell `$procdff$1688' with negative edge clock.
+Creating register for signal `\SB_DFFNE.\Q' using process `\SB_DFFNE.$proc$/share/ice40/cells_sim.v:906$209'.
+  created $dff cell `$procdff$1689' with negative edge clock.
+Creating register for signal `\SB_DFFN.\Q' using process `\SB_DFFN.$proc$/share/ice40/cells_sim.v:868$207'.
+  created $dff cell `$procdff$1690' with negative edge clock.
+Creating register for signal `\SB_DFFES.\Q' using process `\SB_DFFES.$proc$/share/ice40/cells_sim.v:789$203'.
+  created $adff cell `$procdff$1691' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESS.\Q' using process `\SB_DFFESS.$proc$/share/ice40/cells_sim.v:731$196'.
+  created $dff cell `$procdff$1692' with positive edge clock.
+Creating register for signal `\SB_DFFER.\Q' using process `\SB_DFFER.$proc$/share/ice40/cells_sim.v:654$192'.
+  created $adff cell `$procdff$1693' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESR.\Q' using process `\SB_DFFESR.$proc$/share/ice40/cells_sim.v:596$185'.
+  created $dff cell `$procdff$1694' with positive edge clock.
+Creating register for signal `\SB_DFFS.\Q' using process `\SB_DFFS.$proc$/share/ice40/cells_sim.v:525$182'.
+  created $adff cell `$procdff$1695' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSS.\Q' using process `\SB_DFFSS.$proc$/share/ice40/cells_sim.v:475$179'.
+  created $dff cell `$procdff$1696' with positive edge clock.
+Creating register for signal `\SB_DFFR.\Q' using process `\SB_DFFR.$proc$/share/ice40/cells_sim.v:404$176'.
+  created $adff cell `$procdff$1697' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSR.\Q' using process `\SB_DFFSR.$proc$/share/ice40/cells_sim.v:354$173'.
+  created $dff cell `$procdff$1698' with positive edge clock.
+Creating register for signal `\SB_DFFE.\Q' using process `\SB_DFFE.$proc$/share/ice40/cells_sim.v:309$171'.
+  created $dff cell `$procdff$1699' with positive edge clock.
+Creating register for signal `\SB_DFF.\Q' using process `\SB_DFF.$proc$/share/ice40/cells_sim.v:271$169'.
+  created $dff cell `$procdff$1700' with positive edge clock.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `SB_DFFNES.$proc$/share/ice40/cells_sim.v:0$244'.
+Found and cleaned up 1 empty switch in `\SB_DFFNES.$proc$/share/ice40/cells_sim.v:1386$241'.
+Removing empty process `SB_DFFNES.$proc$/share/ice40/cells_sim.v:1386$241'.
+Removing empty process `SB_DFFNESS.$proc$/share/ice40/cells_sim.v:0$240'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESS.$proc$/share/ice40/cells_sim.v:1328$234'.
+Removing empty process `SB_DFFNESS.$proc$/share/ice40/cells_sim.v:1328$234'.
+Removing empty process `SB_DFFNER.$proc$/share/ice40/cells_sim.v:0$233'.
+Found and cleaned up 1 empty switch in `\SB_DFFNER.$proc$/share/ice40/cells_sim.v:1251$230'.
+Removing empty process `SB_DFFNER.$proc$/share/ice40/cells_sim.v:1251$230'.
+Removing empty process `SB_DFFNESR.$proc$/share/ice40/cells_sim.v:0$229'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESR.$proc$/share/ice40/cells_sim.v:1193$223'.
+Removing empty process `SB_DFFNESR.$proc$/share/ice40/cells_sim.v:1193$223'.
+Removing empty process `SB_DFFNS.$proc$/share/ice40/cells_sim.v:0$222'.
+Removing empty process `SB_DFFNS.$proc$/share/ice40/cells_sim.v:1122$220'.
+Removing empty process `SB_DFFNSS.$proc$/share/ice40/cells_sim.v:0$219'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSS.$proc$/share/ice40/cells_sim.v:1072$217'.
+Removing empty process `SB_DFFNSS.$proc$/share/ice40/cells_sim.v:1072$217'.
+Removing empty process `SB_DFFNR.$proc$/share/ice40/cells_sim.v:0$216'.
+Removing empty process `SB_DFFNR.$proc$/share/ice40/cells_sim.v:1001$214'.
+Removing empty process `SB_DFFNSR.$proc$/share/ice40/cells_sim.v:0$213'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSR.$proc$/share/ice40/cells_sim.v:951$211'.
+Removing empty process `SB_DFFNSR.$proc$/share/ice40/cells_sim.v:951$211'.
+Removing empty process `SB_DFFNE.$proc$/share/ice40/cells_sim.v:0$210'.
+Found and cleaned up 1 empty switch in `\SB_DFFNE.$proc$/share/ice40/cells_sim.v:906$209'.
+Removing empty process `SB_DFFNE.$proc$/share/ice40/cells_sim.v:906$209'.
+Removing empty process `SB_DFFN.$proc$/share/ice40/cells_sim.v:0$208'.
+Removing empty process `SB_DFFN.$proc$/share/ice40/cells_sim.v:868$207'.
+Removing empty process `SB_DFFES.$proc$/share/ice40/cells_sim.v:0$206'.
+Found and cleaned up 1 empty switch in `\SB_DFFES.$proc$/share/ice40/cells_sim.v:789$203'.
+Removing empty process `SB_DFFES.$proc$/share/ice40/cells_sim.v:789$203'.
+Removing empty process `SB_DFFESS.$proc$/share/ice40/cells_sim.v:0$202'.
+Found and cleaned up 2 empty switches in `\SB_DFFESS.$proc$/share/ice40/cells_sim.v:731$196'.
+Removing empty process `SB_DFFESS.$proc$/share/ice40/cells_sim.v:731$196'.
+Removing empty process `SB_DFFER.$proc$/share/ice40/cells_sim.v:0$195'.
+Found and cleaned up 1 empty switch in `\SB_DFFER.$proc$/share/ice40/cells_sim.v:654$192'.
+Removing empty process `SB_DFFER.$proc$/share/ice40/cells_sim.v:654$192'.
+Removing empty process `SB_DFFESR.$proc$/share/ice40/cells_sim.v:0$191'.
+Found and cleaned up 2 empty switches in `\SB_DFFESR.$proc$/share/ice40/cells_sim.v:596$185'.
+Removing empty process `SB_DFFESR.$proc$/share/ice40/cells_sim.v:596$185'.
+Removing empty process `SB_DFFS.$proc$/share/ice40/cells_sim.v:0$184'.
+Removing empty process `SB_DFFS.$proc$/share/ice40/cells_sim.v:525$182'.
+Removing empty process `SB_DFFSS.$proc$/share/ice40/cells_sim.v:0$181'.
+Found and cleaned up 1 empty switch in `\SB_DFFSS.$proc$/share/ice40/cells_sim.v:475$179'.
+Removing empty process `SB_DFFSS.$proc$/share/ice40/cells_sim.v:475$179'.
+Removing empty process `SB_DFFR.$proc$/share/ice40/cells_sim.v:0$178'.
+Removing empty process `SB_DFFR.$proc$/share/ice40/cells_sim.v:404$176'.
+Removing empty process `SB_DFFSR.$proc$/share/ice40/cells_sim.v:0$175'.
+Found and cleaned up 1 empty switch in `\SB_DFFSR.$proc$/share/ice40/cells_sim.v:354$173'.
+Removing empty process `SB_DFFSR.$proc$/share/ice40/cells_sim.v:354$173'.
+Removing empty process `SB_DFFE.$proc$/share/ice40/cells_sim.v:0$172'.
+Found and cleaned up 1 empty switch in `\SB_DFFE.$proc$/share/ice40/cells_sim.v:309$171'.
+Removing empty process `SB_DFFE.$proc$/share/ice40/cells_sim.v:309$171'.
+Removing empty process `SB_DFF.$proc$/share/ice40/cells_sim.v:0$170'.
+Removing empty process `SB_DFF.$proc$/share/ice40/cells_sim.v:271$169'.
+Removing empty process `top.$group_60'.
+Removing empty process `top.$group_59'.
+Found and cleaned up 5 empty switches in `\top.$group_53'.
+Removing empty process `top.$group_53'.
+Found and cleaned up 3 empty switches in `\top.$group_52'.
+Removing empty process `top.$group_52'.
+Found and cleaned up 3 empty switches in `\top.$group_51'.
+Removing empty process `top.$group_51'.
+Found and cleaned up 3 empty switches in `\top.$group_50'.
+Removing empty process `top.$group_50'.
+Found and cleaned up 5 empty switches in `\top.$group_49'.
+Removing empty process `top.$group_49'.
+Found and cleaned up 3 empty switches in `\top.$group_48'.
+Removing empty process `top.$group_48'.
+Found and cleaned up 5 empty switches in `\top.$group_47'.
+Removing empty process `top.$group_47'.
+Found and cleaned up 3 empty switches in `\top.$group_46'.
+Removing empty process `top.$group_46'.
+Found and cleaned up 4 empty switches in `\top.$group_45'.
+Removing empty process `top.$group_45'.
+Found and cleaned up 3 empty switches in `\top.$group_42'.
+Removing empty process `top.$group_42'.
+Found and cleaned up 5 empty switches in `\top.$group_41'.
+Removing empty process `top.$group_41'.
+Removing empty process `top.$group_40'.
+Removing empty process `top.$group_39'.
+Removing empty process `top.$group_38'.
+Removing empty process `top.$group_37'.
+Removing empty process `top.$group_36'.
+Found and cleaned up 3 empty switches in `\top.$group_35'.
+Removing empty process `top.$group_35'.
+Found and cleaned up 1 empty switch in `\top.$group_34'.
+Removing empty process `top.$group_34'.
+Found and cleaned up 3 empty switches in `\top.$group_33'.
+Removing empty process `top.$group_33'.
+Found and cleaned up 1 empty switch in `\top.$group_32'.
+Removing empty process `top.$group_32'.
+Found and cleaned up 3 empty switches in `\top.$group_31'.
+Removing empty process `top.$group_31'.
+Found and cleaned up 1 empty switch in `\top.$group_30'.
+Removing empty process `top.$group_30'.
+Removing empty process `top.$group_29'.
+Removing empty process `top.$group_28'.
+Removing empty process `top.$group_27'.
+Removing empty process `top.$group_26'.
+Removing empty process `top.$group_25'.
+Removing empty process `top.$group_24'.
+Removing empty process `top.$group_23'.
+Removing empty process `top.$group_22'.
+Removing empty process `top.$group_21'.
+Removing empty process `top.$group_20'.
+Removing empty process `top.$group_19'.
+Removing empty process `top.$group_18'.
+Removing empty process `top.$group_17'.
+Removing empty process `top.$group_16'.
+Removing empty process `top.$group_15'.
+Removing empty process `top.$group_14'.
+Removing empty process `top.$group_13'.
+Removing empty process `top.$group_12'.
+Removing empty process `top.$group_11'.
+Removing empty process `top.$group_10'.
+Removing empty process `top.$group_9'.
+Removing empty process `top.$group_8'.
+Removing empty process `top.$group_7'.
+Removing empty process `top.$group_6'.
+Removing empty process `top.$group_5'.
+Removing empty process `top.$group_4'.
+Removing empty process `top.$group_3'.
+Removing empty process `top.$group_2'.
+Removing empty process `top.$group_1'.
+Removing empty process `top.$group_0'.
+Removing empty process `pin_led_2.$group_0'.
+Removing empty process `pin_led_1.$group_0'.
+Removing empty process `pin_led_0.$group_0'.
+Removing empty process `pin_debug_spi_0__cs.$group_0'.
+Removing empty process `cd_sync.$group_4'.
+Removing empty process `cd_sync.$group_3'.
+Found and cleaned up 1 empty switch in `\cd_sync.$group_2'.
+Removing empty process `cd_sync.$group_2'.
+Found and cleaned up 1 empty switch in `\cd_sync.$group_1'.
+Removing empty process `cd_sync.$group_1'.
+Removing empty process `cd_sync.$group_0'.
+Removing empty process `U$$2.$group_2'.
+Removing empty process `U$$2.$group_1'.
+Removing empty process `U$$2.$group_0'.
+Removing empty process `U$$1.$group_2'.
+Removing empty process `U$$1.$group_1'.
+Removing empty process `U$$1.$group_0'.
+Removing empty process `U$$0.$group_2'.
+Removing empty process `U$$0.$group_1'.
+Removing empty process `U$$0.$group_0'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_16'.
+Removing empty process `prism_driver.$group_16'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_15'.
+Removing empty process `prism_driver.$group_15'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_14'.
+Removing empty process `prism_driver.$group_14'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_13'.
+Removing empty process `prism_driver.$group_13'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_12'.
+Removing empty process `prism_driver.$group_12'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_11'.
+Removing empty process `prism_driver.$group_11'.
+Found and cleaned up 2 empty switches in `\prism_driver.$group_10'.
+Removing empty process `prism_driver.$group_10'.
+Found and cleaned up 2 empty switches in `\prism_driver.$group_9'.
+Removing empty process `prism_driver.$group_9'.
+Found and cleaned up 2 empty switches in `\prism_driver.$group_8'.
+Removing empty process `prism_driver.$group_8'.
+Found and cleaned up 2 empty switches in `\prism_driver.$group_7'.
+Removing empty process `prism_driver.$group_7'.
+Found and cleaned up 2 empty switches in `\prism_driver.$group_6'.
+Removing empty process `prism_driver.$group_6'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_5'.
+Removing empty process `prism_driver.$group_5'.
+Found and cleaned up 2 empty switches in `\prism_driver.$group_4'.
+Removing empty process `prism_driver.$group_4'.
+Found and cleaned up 1 empty switch in `\prism_driver.$group_3'.
+Removing empty process `prism_driver.$group_3'.
+Removing empty process `prism_driver.$group_2'.
+Removing empty process `prism_driver.$group_1'.
+Removing empty process `prism_driver.$group_0'.
+Found and cleaned up 7 empty switches in `\laserhead.$group_32'.
+Removing empty process `laserhead.$group_32'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_31'.
+Removing empty process `laserhead.$group_31'.
+Found and cleaned up 6 empty switches in `\laserhead.$group_30'.
+Removing empty process `laserhead.$group_30'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_29'.
+Removing empty process `laserhead.$group_29'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_28'.
+Removing empty process `laserhead.$group_28'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_27'.
+Removing empty process `laserhead.$group_27'.
+Found and cleaned up 9 empty switches in `\laserhead.$group_26'.
+Removing empty process `laserhead.$group_26'.
+Found and cleaned up 7 empty switches in `\laserhead.$group_25'.
+Removing empty process `laserhead.$group_25'.
+Found and cleaned up 3 empty switches in `\laserhead.$group_24'.
+Removing empty process `laserhead.$group_24'.
+Found and cleaned up 3 empty switches in `\laserhead.$group_23'.
+Removing empty process `laserhead.$group_23'.
+Found and cleaned up 6 empty switches in `\laserhead.$group_22'.
+Removing empty process `laserhead.$group_22'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_21'.
+Removing empty process `laserhead.$group_21'.
+Found and cleaned up 12 empty switches in `\laserhead.$group_20'.
+Removing empty process `laserhead.$group_20'.
+Found and cleaned up 2 empty switches in `\laserhead.$group_19'.
+Removing empty process `laserhead.$group_19'.
+Found and cleaned up 8 empty switches in `\laserhead.$group_18'.
+Removing empty process `laserhead.$group_18'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_17'.
+Removing empty process `laserhead.$group_17'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_16'.
+Removing empty process `laserhead.$group_16'.
+Found and cleaned up 5 empty switches in `\laserhead.$group_15'.
+Removing empty process `laserhead.$group_15'.
+Found and cleaned up 5 empty switches in `\laserhead.$group_14'.
+Removing empty process `laserhead.$group_14'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_13'.
+Removing empty process `laserhead.$group_13'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_12'.
+Removing empty process `laserhead.$group_12'.
+Found and cleaned up 5 empty switches in `\laserhead.$group_11'.
+Removing empty process `laserhead.$group_11'.
+Found and cleaned up 5 empty switches in `\laserhead.$group_10'.
+Removing empty process `laserhead.$group_10'.
+Found and cleaned up 14 empty switches in `\laserhead.$group_9'.
+Removing empty process `laserhead.$group_9'.
+Found and cleaned up 6 empty switches in `\laserhead.$group_8'.
+Removing empty process `laserhead.$group_8'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_7'.
+Removing empty process `laserhead.$group_7'.
+Found and cleaned up 4 empty switches in `\laserhead.$group_6'.
+Removing empty process `laserhead.$group_6'.
+Found and cleaned up 1 empty switch in `\laserhead.$group_5'.
+Removing empty process `laserhead.$group_5'.
+Found and cleaned up 2 empty switches in `\laserhead.$group_4'.
+Removing empty process `laserhead.$group_4'.
+Found and cleaned up 2 empty switches in `\laserhead.$group_3'.
+Removing empty process `laserhead.$group_3'.
+Found and cleaned up 2 empty switches in `\laserhead.$group_2'.
+Removing empty process `laserhead.$group_2'.
+Found and cleaned up 2 empty switches in `\laserhead.$group_1'.
+Removing empty process `laserhead.$group_1'.
+Found and cleaned up 3 empty switches in `\laserhead.$group_0'.
+Removing empty process `laserhead.$group_0'.
+Found and cleaned up 3 empty switches in `\polynomal.$group_18'.
+Removing empty process `polynomal.$group_18'.
+Found and cleaned up 3 empty switches in `\polynomal.$group_17'.
+Removing empty process `polynomal.$group_17'.
+Found and cleaned up 4 empty switches in `\polynomal.$group_16'.
+Removing empty process `polynomal.$group_16'.
+Found and cleaned up 4 empty switches in `\polynomal.$group_15'.
+Removing empty process `polynomal.$group_15'.
+Found and cleaned up 4 empty switches in `\polynomal.$group_14'.
+Removing empty process `polynomal.$group_14'.
+Found and cleaned up 4 empty switches in `\polynomal.$group_13'.
+Removing empty process `polynomal.$group_13'.
+Found and cleaned up 4 empty switches in `\polynomal.$group_12'.
+Removing empty process `polynomal.$group_12'.
+Found and cleaned up 4 empty switches in `\polynomal.$group_11'.
+Removing empty process `polynomal.$group_11'.
+Found and cleaned up 3 empty switches in `\polynomal.$group_10'.
+Removing empty process `polynomal.$group_10'.
+Found and cleaned up 4 empty switches in `\polynomal.$group_9'.
+Removing empty process `polynomal.$group_9'.
+Found and cleaned up 2 empty switches in `\polynomal.$group_8'.
+Removing empty process `polynomal.$group_8'.
+Found and cleaned up 3 empty switches in `\polynomal.$group_7'.
+Removing empty process `polynomal.$group_7'.
+Found and cleaned up 2 empty switches in `\polynomal.$group_6'.
+Removing empty process `polynomal.$group_6'.
+Found and cleaned up 3 empty switches in `\polynomal.$group_5'.
+Removing empty process `polynomal.$group_5'.
+Found and cleaned up 2 empty switches in `\polynomal.$group_4'.
+Removing empty process `polynomal.$group_4'.
+Found and cleaned up 3 empty switches in `\polynomal.$group_3'.
+Removing empty process `polynomal.$group_3'.
+Removing empty process `polynomal.$group_2'.
+Removing empty process `polynomal.$group_1'.
+Removing empty process `polynomal.$group_0'.
+Found and cleaned up 3 empty switches in `\parser.$group_19'.
+Removing empty process `parser.$group_19'.
+Found and cleaned up 5 empty switches in `\parser.$group_18'.
+Removing empty process `parser.$group_18'.
+Found and cleaned up 5 empty switches in `\parser.$group_17'.
+Removing empty process `parser.$group_17'.
+Found and cleaned up 5 empty switches in `\parser.$group_16'.
+Removing empty process `parser.$group_16'.
+Found and cleaned up 5 empty switches in `\parser.$group_15'.
+Removing empty process `parser.$group_15'.
+Found and cleaned up 5 empty switches in `\parser.$group_14'.
+Removing empty process `parser.$group_14'.
+Found and cleaned up 9 empty switches in `\parser.$group_13'.
+Removing empty process `parser.$group_13'.
+Found and cleaned up 5 empty switches in `\parser.$group_12'.
+Removing empty process `parser.$group_12'.
+Found and cleaned up 6 empty switches in `\parser.$group_11'.
+Removing empty process `parser.$group_11'.
+Found and cleaned up 4 empty switches in `\parser.$group_10'.
+Removing empty process `parser.$group_10'.
+Found and cleaned up 1 empty switch in `\parser.$group_9'.
+Removing empty process `parser.$group_9'.
+Removing empty process `parser.$group_8'.
+Removing empty process `parser.$group_7'.
+Removing empty process `parser.$group_6'.
+Removing empty process `parser.$group_5'.
+Removing empty process `parser.$group_4'.
+Removing empty process `parser.$group_3'.
+Removing empty process `parser.$group_2'.
+Removing empty process `parser.$group_1'.
+Removing empty process `parser.$group_0'.
+Removing empty process `fifo.$group_13'.
+Found and cleaned up 1 empty switch in `\fifo.$group_12'.
+Removing empty process `fifo.$group_12'.
+Removing empty process `fifo.$group_11'.
+Found and cleaned up 2 empty switches in `\fifo.$group_10'.
+Removing empty process `fifo.$group_10'.
+Found and cleaned up 3 empty switches in `\fifo.$group_9'.
+Removing empty process `fifo.$group_9'.
+Found and cleaned up 1 empty switch in `\fifo.$group_8'.
+Removing empty process `fifo.$group_8'.
+Found and cleaned up 1 empty switch in `\fifo.$group_7'.
+Removing empty process `fifo.$group_7'.
+Found and cleaned up 2 empty switches in `\fifo.$group_6'.
+Removing empty process `fifo.$group_6'.
+Found and cleaned up 3 empty switches in `\fifo.$group_5'.
+Removing empty process `fifo.$group_5'.
+Found and cleaned up 1 empty switch in `\fifo.$group_4'.
+Removing empty process `fifo.$group_4'.
+Removing empty process `fifo.$group_3'.
+Removing empty process `fifo.$group_2'.
+Removing empty process `fifo.$group_1'.
+Removing empty process `fifo.$group_0'.
+Removing empty process `interf.$group_11'.
+Found and cleaned up 3 empty switches in `\interf.$group_10'.
+Removing empty process `interf.$group_10'.
+Found and cleaned up 2 empty switches in `\interf.$group_9'.
+Removing empty process `interf.$group_9'.
+Found and cleaned up 4 empty switches in `\interf.$group_8'.
+Removing empty process `interf.$group_8'.
+Found and cleaned up 3 empty switches in `\interf.$group_7'.
+Removing empty process `interf.$group_7'.
+Found and cleaned up 4 empty switches in `\interf.$group_6'.
+Removing empty process `interf.$group_6'.
+Found and cleaned up 6 empty switches in `\interf.$group_5'.
+Removing empty process `interf.$group_5'.
+Found and cleaned up 8 empty switches in `\interf.$group_4'.
+Removing empty process `interf.$group_4'.
+Removing empty process `interf.$group_3'.
+Removing empty process `interf.$group_2'.
+Found and cleaned up 3 empty switches in `\interf.$group_1'.
+Removing empty process `interf.$group_1'.
+Found and cleaned up 3 empty switches in `\interf.$group_0'.
+Removing empty process `interf.$group_0'.
+Cleaned up 408 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~33 debug messages>
+Optimizing module pin_led_2.
+Optimizing module pin_led_1.
+Optimizing module pin_led_0.
+Optimizing module pin_bldc_0__sensor2.
+Optimizing module pin_bldc_0__sensor1.
+Optimizing module pin_bldc_0__sensor0.
+Optimizing module pin_bldc_0__wH.
+Optimizing module pin_bldc_0__wL.
+Optimizing module pin_bldc_0__vH.
+Optimizing module pin_bldc_0__vL.
+Optimizing module pin_bldc_0__uH.
+Optimizing module pin_bldc_0__uL.
+Optimizing module pin_stepper_2__limit.
+Optimizing module pin_stepper_2__dir.
+Optimizing module pin_stepper_2__step.
+Optimizing module pin_stepper_1__limit.
+Optimizing module pin_stepper_1__dir.
+Optimizing module pin_stepper_1__step.
+Optimizing module pin_stepper_0__limit.
+Optimizing module pin_stepper_0__dir.
+Optimizing module pin_stepper_0__step.
+Optimizing module pin_laserscanner_0__photodiode.
+Optimizing module pin_laserscanner_0__laser1.
+Optimizing module pin_laserscanner_0__laser0.
+Optimizing module pin_debug_spi_0__cs.
+Optimizing module pin_debug_spi_0__sdo.
+Optimizing module pin_debug_spi_0__sdi.
+Optimizing module pin_debug_spi_0__sck.
+Optimizing module cd_sync.
+Optimizing module U$$2.
+Optimizing module U$$1.
+Optimizing module U$$0.
+Optimizing module prism_driver.
+Optimizing module laserhead.
+<suppressed ~56 debug messages>
+Optimizing module polynomal.
+<suppressed ~2 debug messages>
+Optimizing module parser.
+<suppressed ~17 debug messages>
+Optimizing module fifo.
+<suppressed ~1 debug messages>
+Optimizing module interf.
+<suppressed ~6 debug messages>
+
+2.4. Executing FLATTEN pass (flatten design).
+Deleting now unused module pin_led_2.
+Deleting now unused module pin_led_1.
+Deleting now unused module pin_led_0.
+Deleting now unused module pin_bldc_0__sensor2.
+Deleting now unused module pin_bldc_0__sensor1.
+Deleting now unused module pin_bldc_0__sensor0.
+Deleting now unused module pin_bldc_0__wH.
+Deleting now unused module pin_bldc_0__wL.
+Deleting now unused module pin_bldc_0__vH.
+Deleting now unused module pin_bldc_0__vL.
+Deleting now unused module pin_bldc_0__uH.
+Deleting now unused module pin_bldc_0__uL.
+Deleting now unused module pin_stepper_2__limit.
+Deleting now unused module pin_stepper_2__dir.
+Deleting now unused module pin_stepper_2__step.
+Deleting now unused module pin_stepper_1__limit.
+Deleting now unused module pin_stepper_1__dir.
+Deleting now unused module pin_stepper_1__step.
+Deleting now unused module pin_stepper_0__limit.
+Deleting now unused module pin_stepper_0__dir.
+Deleting now unused module pin_stepper_0__step.
+Deleting now unused module pin_laserscanner_0__photodiode.
+Deleting now unused module pin_laserscanner_0__laser1.
+Deleting now unused module pin_laserscanner_0__laser0.
+Deleting now unused module pin_debug_spi_0__cs.
+Deleting now unused module pin_debug_spi_0__sdo.
+Deleting now unused module pin_debug_spi_0__sdi.
+Deleting now unused module pin_debug_spi_0__sck.
+Deleting now unused module cd_sync.
+Deleting now unused module U$$2.
+Deleting now unused module U$$1.
+Deleting now unused module U$$0.
+Deleting now unused module prism_driver.
+Deleting now unused module laserhead.
+Deleting now unused module polynomal.
+Deleting now unused module parser.
+Deleting now unused module fifo.
+Deleting now unused module interf.
+<suppressed ~38 debug messages>
+
+2.5. Executing TRIBUF pass.
+
+2.6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~122 debug messages>
+
+2.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 176 unused cells and 866 unused wires.
+<suppressed ~218 debug messages>
+
+2.9. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~1140 debug messages>
+Removed a total of 380 cells.
+
+2.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~111 debug messages>
+
+2.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New ctrl vector for $pmux cell $flatten\parser.$procmux$1475: { $flatten\parser.$procmux$1449_CMP $flatten\parser.$procmux$1406_CMP $flatten\parser.$procmux$1395_CMP $auto$opt_reduce.cc:134:opt_pmux$1702 }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$1048: { $auto$opt_reduce.cc:134:opt_pmux$1704 $flatten\laserhead.$procmux$1005_CMP }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$1059: { $auto$opt_reduce.cc:134:opt_pmux$1706 $flatten\laserhead.$procmux$1005_CMP }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$1089: { $auto$opt_reduce.cc:134:opt_pmux$1708 $flatten\laserhead.$procmux$1005_CMP }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$1116: { $flatten\laserhead.$procmux$1014_CMP $flatten\laserhead.$procmux$1013_CMP $flatten\laserhead.$procmux$1010_CMP $auto$opt_reduce.cc:134:opt_pmux$1710 }
+    New ctrl vector for $pmux cell $procmux$427: $auto$opt_reduce.cc:134:opt_pmux$1712
+    New ctrl vector for $pmux cell $procmux$576: { $procmux$439_CMP $auto$opt_reduce.cc:134:opt_pmux$1714 }
+    New ctrl vector for $pmux cell $procmux$629: { $procmux$573_CMP $procmux$520_CMP $procmux$439_CMP $procmux$524_CMP $auto$opt_reduce.cc:134:opt_pmux$1716 $procmux$630_CMP }
+  Optimizing cells in module \top.
+Performed a total of 9 changes.
+
+2.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+2.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 405 unused wires.
+<suppressed ~18 debug messages>
+
+2.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~113 debug messages>
+
+2.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.10.16. Finished OPT passes. (There is nothing left to do.)
+
+2.11. Executing FSM pass (extract and optimize FSM).
+
+2.11.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking top.dispatcher_state as FSM state register:
+    Register has an initialization value.
+Not marking top.laserhead.fsm_state as FSM state register:
+    Register has an initialization value.
+Not marking top.laserhead.stablethresh as FSM state register:
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.parser.interf.fsm_state as FSM state register:
+    Register has an initialization value.
+Not marking top.parser.parser_state as FSM state register:
+    Register has an initialization value.
+Not marking top.polynomal.polynomen_state as FSM state register:
+    Register has an initialization value.
+
+2.11.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.11.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.11.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.11.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.11.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.11.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~113 debug messages>
+
+2.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\prism_driver.$159 ($dff) from module top (D = $flatten\prism_driver.$procmux$770_Y, Q = \prism_driver.off, rval = 1'0).
+Adding SRST signal on $flatten\prism_driver.$158 ($dff) from module top (D = $flatten\prism_driver.$51 [9:0], Q = \prism_driver.duty, rval = 10'0000000000).
+Adding SRST signal on $flatten\prism_driver.$157 ($dff) from module top (D = $flatten\prism_driver.$procmux$781_Y, Q = \prism_driver.measurement, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1723 ($sdff) from module top (D = $flatten\prism_driver.$procmux$781_Y, Q = \prism_driver.measurement).
+Adding SRST signal on $flatten\prism_driver.$156 ($dff) from module top (D = $flatten\prism_driver.$38 [20:0], Q = \prism_driver.timer, rval = 21'000000000000000000000).
+Adding SRST signal on $flatten\prism_driver.$155 ($dff) from module top (D = $flatten\prism_driver.$procmux$795_Y, Q = \prism_driver.delay, rval = 10'0000000000).
+Adding SRST signal on $flatten\prism_driver.$154 ($dff) from module top (D = \prism_driver.statefilter, Q = \prism_driver.stateold, rval = 3'000).
+Adding SRST signal on $flatten\prism_driver.$153 ($dff) from module top (D = $flatten\prism_driver.$procmux$801_Y, Q = \prism_driver.statefilter, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$1734 ($sdff) from module top (D = \prism_driver.state, Q = \prism_driver.statefilter).
+Adding SRST signal on $flatten\prism_driver.$152 ($dff) from module top (D = { \pin_bldc_0__sensor2.bldc_0__sensor2__i \pin_bldc_0__sensor1.bldc_0__sensor1__i \pin_bldc_0__sensor0.bldc_0__sensor0__i }, Q = \prism_driver.state, rval = 3'000).
+Adding SRST signal on $flatten\polynomal.$186 ($dff) from module top (D = $flatten\polynomal.$procmux$1267_Y, Q = \polynomal.cntr, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$1737 ($sdff) from module top (D = $flatten\polynomal.$procmux$1265_Y, Q = \polynomal.cntr).
+Adding SRST signal on $flatten\polynomal.$185 ($dff) from module top (D = $flatten\polynomal.$procmux$1276_Y, Q = \polynomal.ticks, rval = 14'00000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1743 ($sdff) from module top (D = $flatten\polynomal.$procmux$1274_Y, Q = \polynomal.ticks).
+Adding SRST signal on $flatten\polynomal.$184 ($dff) from module top (D = $flatten\polynomal.$procmux$1282_Y, Q = $flatten\polynomal.$signal$127, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1749 ($sdff) from module top (D = $flatten\polynomal.$procmux$1282_Y, Q = $flatten\polynomal.$signal$127).
+Adding SRST signal on $flatten\polynomal.$183 ($dff) from module top (D = $flatten\polynomal.$procmux$1291_Y, Q = { $flatten\polynomal.$signal$14 [38:26] \polynomal_$signal$6 $flatten\polynomal.$signal$14 [24:0] }, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1759 ($sdff) from module top (D = $flatten\polynomal.$procmux$1291_Y [25:0], Q = { \polynomal_$signal$6 $flatten\polynomal.$signal$14 [24:0] }).
+Adding EN signal on $auto$ff.cc:262:slice$1759 ($sdff) from module top (D = $flatten\polynomal.$procmux$1291_Y [38:26], Q = $flatten\polynomal.$signal$14 [38:26]).
+Adding SRST signal on $flatten\polynomal.$182 ($dff) from module top (D = $flatten\polynomal.$procmux$1300_Y, Q = $flatten\polynomal.$signal$92, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1780 ($sdff) from module top (D = $flatten\polynomal.$procmux$1300_Y, Q = $flatten\polynomal.$signal$92).
+Adding SRST signal on $flatten\polynomal.$181 ($dff) from module top (D = $flatten\polynomal.$procmux$1309_Y, Q = { $flatten\polynomal.$signal$13 [38:26] \polynomal_$signal$4 $flatten\polynomal.$signal$13 [24:0] }, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1790 ($sdff) from module top (D = $flatten\polynomal.$procmux$1309_Y [25:0], Q = { \polynomal_$signal$4 $flatten\polynomal.$signal$13 [24:0] }).
+Adding EN signal on $auto$ff.cc:262:slice$1790 ($sdff) from module top (D = $flatten\polynomal.$procmux$1309_Y [38:26], Q = $flatten\polynomal.$signal$13 [38:26]).
+Adding SRST signal on $flatten\polynomal.$180 ($dff) from module top (D = $flatten\polynomal.$procmux$1318_Y, Q = $flatten\polynomal.$signal$57, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1811 ($sdff) from module top (D = $flatten\polynomal.$procmux$1318_Y, Q = $flatten\polynomal.$signal$57).
+Adding SRST signal on $flatten\polynomal.$179 ($dff) from module top (D = $flatten\polynomal.$procmux$1327_Y, Q = { $flatten\polynomal.$signal$12 [38:26] \polynomal_$signal $flatten\polynomal.$signal$12 [24:0] }, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1821 ($sdff) from module top (D = $flatten\polynomal.$procmux$1327_Y [25:0], Q = { \polynomal_$signal $flatten\polynomal.$signal$12 [24:0] }).
+Adding EN signal on $auto$ff.cc:262:slice$1821 ($sdff) from module top (D = $flatten\polynomal.$procmux$1327_Y [38:26], Q = $flatten\polynomal.$signal$12 [38:26]).
+Adding SRST signal on $flatten\polynomal.$178 ($dff) from module top (D = $flatten\polynomal.$procmux$1337_Y, Q = \polynomal.busy, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$1842 ($sdff) from module top (D = $flatten\polynomal.$procmux$1337_Y, Q = \polynomal.busy).
+Adding SRST signal on $flatten\polynomal.$177 ($dff) from module top (D = $flatten\polynomal.$procmux$1347_Y, Q = \polynomal.polynomen_state, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$1846 ($sdff) from module top (D = $flatten\polynomal.$procmux$1347_Y, Q = \polynomal.polynomen_state).
+Adding SRST signal on $flatten\polynomal.$176 ($dff) from module top (D = $flatten\polynomal.$procmux$1355_Y, Q = \pin_stepper_2__dir.stepper_2__dir__o, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$1858 ($sdff) from module top (D = 1'1, Q = \pin_stepper_2__dir.stepper_2__dir__o).
+Adding SRST signal on $flatten\polynomal.$175 ($dff) from module top (D = $flatten\polynomal.$procmux$1363_Y, Q = $flatten\polynomal.$signal$29, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1864 ($sdff) from module top (D = $flatten\polynomal.$procmux$1363_Y [25:0], Q = $flatten\polynomal.$signal$29 [25:0]).
+Adding SRST signal on $flatten\polynomal.$174 ($dff) from module top (D = $flatten\polynomal.$procmux$1367_Y, Q = \polynomal_$signal$5, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$1869 ($sdff) from module top (D = 1'1, Q = \polynomal_$signal$5).
+Adding SRST signal on $flatten\polynomal.$173 ($dff) from module top (D = $flatten\polynomal.$procmux$1375_Y, Q = $flatten\polynomal.$signal$22, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1875 ($sdff) from module top (D = $flatten\polynomal.$procmux$1375_Y [25:0], Q = $flatten\polynomal.$signal$22 [25:0]).
+Adding SRST signal on $flatten\polynomal.$172 ($dff) from module top (D = $flatten\polynomal.$procmux$1379_Y, Q = \pin_stepper_0__dir.stepper_0__dir__o, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$1880 ($sdff) from module top (D = 1'1, Q = \pin_stepper_0__dir.stepper_0__dir__o).
+Adding SRST signal on $flatten\polynomal.$171 ($dff) from module top (D = $flatten\polynomal.$procmux$1387_Y, Q = $flatten\polynomal.$signal$15, rval = 39'000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1886 ($sdff) from module top (D = $flatten\polynomal.$procmux$1387_Y [25:0], Q = $flatten\polynomal.$signal$15 [25:0]).
+Adding SRST signal on $flatten\parser.\interf.$62 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1596_Y, Q = \parser.interf.word_received, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1891 ($sdff) from module top (D = \parser.interf.current_word, Q = \parser.interf.word_received).
+Adding SRST signal on $flatten\parser.\interf.$60 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1608_Y, Q = \parser.interf.current_word, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1897 ($sdff) from module top (D = $flatten\parser.\interf.$procmux$1608_Y, Q = \parser.interf.current_word).
+Adding SRST signal on $flatten\parser.\interf.$59 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1616_Y, Q = \parser.interf.command, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$1907 ($sdff) from module top (D = \parser.interf.current_command, Q = \parser.interf.command).
+Adding SRST signal on $flatten\parser.\interf.$58 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1624_Y, Q = \parser.interf.current_command, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$1913 ($sdff) from module top (D = { \parser.interf.current_command [6:0] \U$$1.stage1 }, Q = \parser.interf.current_command).
+Adding SRST signal on $flatten\parser.\interf.$57 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1633_Y, Q = \parser.interf.bit_count, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$1917 ($sdff) from module top (D = $flatten\parser.\interf.$procmux$1633_Y, Q = \parser.interf.bit_count).
+Adding SRST signal on $flatten\parser.\interf.$56 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1649_Y, Q = \parser.interf.fsm_state, rval = 3'001).
+Adding EN signal on $auto$ff.cc:262:slice$1921 ($sdff) from module top (D = $flatten\parser.\interf.$procmux$1649_Y, Q = \parser.interf.fsm_state).
+Adding SRST signal on $flatten\parser.\interf.$55 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1668_Y, Q = \parser.interf.word_complete, rval = 1'0).
+Adding SRST signal on $flatten\parser.\interf.$54 ($dff) from module top (D = $flatten\parser.\interf.$procmux$1675_Y, Q = \parser.interf.command_ready, rval = 1'0).
+Adding SRST signal on $flatten\parser.\fifo.$47 ($dff) from module top (D = $flatten\parser.\fifo.$procmux$1564_Y, Q = \parser.fifo.committed_read_pointer, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1935 ($sdff) from module top (D = \parser.fifo.current_read_pointer, Q = \parser.fifo.committed_read_pointer).
+Adding SRST signal on $flatten\parser.\fifo.$46 ($dff) from module top (D = $flatten\parser.\fifo.$procmux$1570_Y, Q = \parser.fifo.current_read_pointer, rval = 9'000000000).
+Adding SRST signal on $flatten\parser.\fifo.$45 ($dff) from module top (D = $flatten\parser.\fifo.$procmux$1580_Y, Q = \parser.fifo.committed_write_pointer, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1938 ($sdff) from module top (D = \parser.fifo.current_write_pointer, Q = \parser.fifo.committed_write_pointer).
+Adding SRST signal on $flatten\parser.\fifo.$44 ($dff) from module top (D = $flatten\parser.\fifo.$procmux$1584_Y, Q = \parser.fifo.current_write_pointer, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1940 ($sdff) from module top (D = \parser.fifo.next_write_pointer, Q = \parser.fifo.current_write_pointer).
+Adding SRST signal on $flatten\parser.$196 ($dff) from module top (D = $flatten\parser.$procmux$1391_Y, Q = \parser.fifo_write_commit, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$1942 ($sdff) from module top (D = $flatten\parser.$procmux$1391_Y, Q = \parser.fifo_write_commit).
+Adding SRST signal on $flatten\parser.$195 ($dff) from module top (D = $flatten\parser.$procmux$1405_Y, Q = \parser.fifo_write_data, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1950 ($sdff) from module top (D = $flatten\parser.$procmux$1401_Y, Q = \parser.fifo_write_data).
+Adding SRST signal on $flatten\parser.$194 ($dff) from module top (D = $flatten\parser.$procmux$1409_Y, Q = \parser.fifo_write_en, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$1956 ($sdff) from module top (D = $flatten\parser.$procmux$1409_Y, Q = \parser.fifo_write_en).
+Adding SRST signal on $flatten\parser.$193 ($dff) from module top (D = $flatten\parser.$procmux$1427_Y, Q = \parser.instruction, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$1966 ($sdff) from module top (D = \parser.interf.word_received [7:0], Q = \parser.instruction).
+Adding SRST signal on $flatten\parser.$192 ($dff) from module top (D = $flatten\parser.$procmux$1448_Y, Q = \parser.mtrcntr, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$1970 ($sdff) from module top (D = $flatten\parser.$procmux$1432_Y, Q = \parser.mtrcntr).
+Adding SRST signal on $flatten\parser.$191 ($dff) from module top (D = $flatten\parser.$procmux$1471_Y, Q = \parser.interf_word_to_send, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1984 ($sdff) from module top (D = $flatten\parser.$procmux$1461_Y, Q = \parser.interf_word_to_send).
+Adding SRST signal on $flatten\parser.$190 ($dff) from module top (D = $flatten\parser.$procmux$1475_Y, Q = \parser.parser_state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$1996 ($sdff) from module top (D = $flatten\parser.$procmux$1475_Y, Q = \parser.parser_state).
+Adding SRST signal on $flatten\parser.$189 ($dff) from module top (D = $flatten\parser.$procmux$1518_Y, Q = \parser.error, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2008 ($sdff) from module top (D = $flatten\parser.$procmux$1518_Y, Q = \parser.error).
+Adding SRST signal on $flatten\parser.$188 ($dff) from module top (D = $flatten\parser.$procmux$1525_Y, Q = \parser.wordsreceived, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$2020 ($sdff) from module top (D = $flatten\parser.$procmux$1525_Y, Q = \parser.wordsreceived).
+Adding SRST signal on $flatten\parser.$187 ($dff) from module top (D = $flatten\parser.$procmux$1546_Y, Q = \parser.parse, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2032 ($sdff) from module top (D = $flatten\parser.$procmux$1546_Y, Q = \parser.parse).
+Adding SRST signal on $flatten\parser.$186 ($dff) from module top (D = { $flatten\parser.$5 \parser.parse $flatten\parser.$3 }, Q = \parser.state [2:0], rval = 3'000).
+Adding EN signal on $flatten\parser.$186 ($dff) from module top (D = 5'00000, Q = \parser.state [7:3]).
+Adding SRST signal on $flatten\laserhead.$398 ($dff) from module top (D = $flatten\laserhead.$procmux$822_Y, Q = \laserhead.read_old, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2047 ($sdff) from module top (D = $flatten\laserhead.$procmux$820_Y, Q = \laserhead.read_old).
+Adding EN signal on $flatten\laserhead.$396 ($dff) from module top (D = 1'0, Q = \laserhead.read_discard).
+Adding SRST signal on $flatten\laserhead.$394 ($dff) from module top (D = $flatten\laserhead.$procmux$864_Y, Q = \laserhead.stepcnt, rval = 13'0000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2062 ($sdff) from module top (D = $flatten\laserhead.$procmux$860_Y, Q = \laserhead.stepcnt).
+Adding SRST signal on $flatten\laserhead.$393 ($dff) from module top (D = $flatten\laserhead.$procmux$872_Y, Q = \laserhead.step, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2066 ($sdff) from module top (D = $flatten\laserhead.$323, Q = \laserhead.step).
+Adding SRST signal on $flatten\laserhead.$391 ($dff) from module top (D = $flatten\laserhead.$procmux$902_Y, Q = \laserhead.read_commit, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2070 ($sdff) from module top (D = $flatten\laserhead.$procmux$902_Y, Q = \laserhead.read_commit).
+Adding SRST signal on $flatten\laserhead.$390 ($dff) from module top (D = $flatten\laserhead.$procmux$921_Y, Q = \laserhead.stephalfperiod, rval = 13'0000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2084 ($sdff) from module top (D = \parser.fifo.memory_r_data [21:9], Q = \laserhead.stephalfperiod).
+Adding SRST signal on $flatten\laserhead.$389 ($dff) from module top (D = $flatten\laserhead.$procmux$927_Y, Q = \laserhead.dir, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2088 ($sdff) from module top (D = \parser.fifo.memory_r_data [8], Q = \laserhead.dir).
+Adding SRST signal on $flatten\laserhead.$386 ($dff) from module top (D = $flatten\laserhead.$procmux$972_Y, Q = \laserhead.read_en, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2092 ($sdff) from module top (D = $flatten\laserhead.$procmux$972_Y, Q = \laserhead.read_en).
+Adding SRST signal on $flatten\laserhead.$385 ($dff) from module top (D = $flatten\laserhead.$procmux$992_Y, Q = \laserhead.photodiode_d, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2120 ($sdff) from module top (D = \laserhead.photodiode, Q = \laserhead.photodiode_d).
+Adding SRST signal on $flatten\laserhead.$384 ($dff) from module top (D = { $flatten\laserhead.$procmux$998_Y $flatten\laserhead.$procmux$1019_Y }, Q = \laserhead.lasers, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$2122 ($sdff) from module top (D = $flatten\laserhead.$procmux$998_Y, Q = \laserhead.lasers [1]).
+Adding EN signal on $auto$ff.cc:262:slice$2122 ($sdff) from module top (D = $flatten\laserhead.$procmux$1019_Y, Q = \laserhead.lasers [0]).
+Adding SRST signal on $flatten\laserhead.$383 ($dff) from module top (D = $flatten\laserhead.$procmux$1048_Y, Q = \laserhead.lasercnt, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$2155 ($sdff) from module top (D = $flatten\laserhead.$procmux$1048_Y, Q = \laserhead.lasercnt).
+Adding SRST signal on $flatten\laserhead.$382 ($dff) from module top (D = $flatten\laserhead.$procmux$1059_Y, Q = \laserhead.scanbit, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2163 ($sdff) from module top (D = $flatten\laserhead.$procmux$1059_Y, Q = \laserhead.scanbit).
+Adding SRST signal on $flatten\laserhead.$380 ($dff) from module top (D = $flatten\laserhead.$procmux$1089_Y, Q = \laserhead.readbit, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$2173 ($sdff) from module top (D = $flatten\laserhead.$procmux$1089_Y, Q = \laserhead.readbit).
+Adding SRST signal on $flatten\laserhead.$378 ($dff) from module top (D = $flatten\laserhead.$procmux$1111_Y, Q = \laserhead.synchronized, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2183 ($sdff) from module top (D = $flatten\laserhead.$procmux$1111_Y, Q = \laserhead.synchronized).
+Adding SRST signal on $flatten\laserhead.$377 ($dff) from module top (D = $flatten\laserhead.$procmux$1116_Y, Q = \laserhead.tickcounter, rval = 25'0000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2193 ($sdff) from module top (D = $flatten\laserhead.$procmux$1116_Y, Q = \laserhead.tickcounter).
+Adding SRST signal on $flatten\laserhead.$376 ($dff) from module top (D = $flatten\laserhead.$procmux$1146_Y, Q = \laserhead.stablethresh, rval = 24'000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2201 ($sdff) from module top (D = $flatten\laserhead.$procmux$1146_Y, Q = \laserhead.stablethresh).
+Adding SRST signal on $flatten\laserhead.$375 ($dff) from module top (D = $flatten\laserhead.$procmux$1155_Y, Q = \laserhead.fsm_state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$2215 ($sdff) from module top (D = $flatten\laserhead.$procmux$1155_Y, Q = \laserhead.fsm_state).
+Adding SRST signal on $flatten\laserhead.$374 ($dff) from module top (D = $flatten\laserhead.$procmux$1201_Y, Q = \laserhead.error, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2235 ($sdff) from module top (D = $flatten\laserhead.$procmux$1201_Y, Q = \laserhead.error).
+Adding SRST signal on $flatten\laserhead.$372 ($dff) from module top (D = $flatten\laserhead.$procmux$1231_Y, Q = \laserhead.process_lines, rval = 1'0).
+Adding SRST signal on $flatten\laserhead.$371 ($dff) from module top (D = \laserhead_expose_start, Q = \laserhead.expose_start_d, rval = 1'0).
+Adding SRST signal on $flatten\laserhead.$368 ($dff) from module top (D = $flatten\laserhead.$procmux$1247_Y, Q = \laserhead.photodiode_t, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2251 ($sdff) from module top (D = \laserhead.triggered, Q = \laserhead.photodiode_t).
+Adding SRST signal on $flatten\laserhead.$367 ($dff) from module top (D = $flatten\laserhead.$7 [17:0], Q = \laserhead.photodiodecnt, rval = 18'000000000000000000).
+Adding SRST signal on $flatten\laserhead.$366 ($dff) from module top (D = $flatten\laserhead.$procmux$1257_Y, Q = \laserhead.triggered, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2256 ($sdff) from module top (D = 1'1, Q = \laserhead.triggered).
+Adding EN signal on $flatten\cd_sync.$11 ($dff) from module top (D = $flatten\cd_sync.$5 [10:0], Q = \cd_sync.timer).
+Adding EN signal on $flatten\cd_sync.$10 ($dff) from module top (D = 1'1, Q = \cd_sync.ready).
+Adding SRST signal on $269 ($dff) from module top (D = $procmux$438_Y, Q = \polynomal_$signal$13, rval = 26'00000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2262 ($sdff) from module top (D = \parser.fifo.memory_r_data [25:0], Q = \polynomal_$signal$13).
+Adding SRST signal on $268 ($dff) from module top (D = $procmux$450_Y, Q = \polynomal_$signal$12, rval = 26'00000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2268 ($sdff) from module top (D = \parser.fifo.memory_r_data [25:0], Q = \polynomal_$signal$12).
+Adding SRST signal on $267 ($dff) from module top (D = $procmux$463_Y, Q = \polynomal_$signal$11, rval = 26'00000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2272 ($sdff) from module top (D = \parser.fifo.memory_r_data [25:0], Q = \polynomal_$signal$11).
+Adding SRST signal on $266 ($dff) from module top (D = $procmux$477_Y, Q = \polynomal_$signal$10, rval = 26'00000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2276 ($sdff) from module top (D = \parser.fifo.memory_r_data [25:0], Q = \polynomal_$signal$10).
+Adding SRST signal on $265 ($dff) from module top (D = $procmux$492_Y, Q = \polynomal_$signal$9, rval = 26'00000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2280 ($sdff) from module top (D = \parser.fifo.memory_r_data [25:0], Q = \polynomal_$signal$9).
+Adding SRST signal on $264 ($dff) from module top (D = $procmux$508_Y, Q = \polynomal_$signal$8, rval = 26'00000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2284 ($sdff) from module top (D = \parser.fifo.memory_r_data [25:0], Q = \polynomal_$signal$8).
+Adding SRST signal on $263 ($dff) from module top (D = $procmux$519_Y, Q = \parser_dispatcherror, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2288 ($sdff) from module top (D = 1'1, Q = \parser_dispatcherror).
+Adding SRST signal on $262 ($dff) from module top (D = $procmux$523_Y, Q = \laserhead_expose_start, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2298 ($sdff) from module top (D = $procmux$523_Y, Q = \laserhead_expose_start).
+Adding SRST signal on $261 ($dff) from module top (D = $procmux$534_Y, Q = \read_discard, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2310 ($sdff) from module top (D = $procmux$534_Y, Q = \read_discard).
+Adding SRST signal on $260 ($dff) from module top (D = $procmux$550_Y, Q = \coeffcnt, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$2322 ($sdff) from module top (D = $procmux$550_Y, Q = \coeffcnt).
+Adding SRST signal on $259 ($dff) from module top (D = $procmux$559_Y, Q = \polynomal_ticklimit, rval = 14'00000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2334 ($sdff) from module top (D = \parser.fifo.memory_r_data [21:8], Q = \polynomal_ticklimit).
+Adding SRST signal on $258 ($dff) from module top (D = $procmux$568_Y, Q = \read_en, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2338 ($sdff) from module top (D = $procmux$568_Y, Q = \read_en).
+Adding SRST signal on $257 ($dff) from module top (D = $procmux$576_Y, Q = \polynomal_start, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2348 ($sdff) from module top (D = $procmux$576_Y, Q = \polynomal_start).
+Adding SRST signal on $256 ($dff) from module top (D = $procmux$588_Y, Q = \read_commit, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2356 ($sdff) from module top (D = $procmux$588_Y, Q = \read_commit).
+Adding SRST signal on $255 ($dff) from module top (D = $procmux$604_Y, Q = \laserhead_synchronize, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2368 ($sdff) from module top (D = $procmux$604_Y, Q = \laserhead_synchronize).
+Adding SRST signal on $254 ($dff) from module top (D = $procmux$614_Y, Q = \enable_prism, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$2378 ($sdff) from module top (D = $procmux$614_Y, Q = \enable_prism).
+Adding SRST signal on $253 ($dff) from module top (D = $procmux$624_Y, Q = \lasers, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$2388 ($sdff) from module top (D = $procmux$624_Y, Q = \lasers).
+Adding SRST signal on $252 ($dff) from module top (D = $procmux$629_Y, Q = \dispatcher_state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$2398 ($sdff) from module top (D = $procmux$629_Y, Q = \dispatcher_state).
+Adding SRST signal on $251 ($dff) from module top (D = $procmux$654_Y, Q = \parser_$signal$2, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2408 ($sdff) from module top (D = $procmux$652_Y, Q = \parser_$signal$2).
+Adding SRST signal on $250 ($dff) from module top (D = \pin_stepper_2__step.stepper_2__step__o, Q = $signal$106, rval = 1'0).
+Adding SRST signal on $249 ($dff) from module top (D = $procmux$667_Y, Q = \parser_$signal$1, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2415 ($sdff) from module top (D = $procmux$665_Y, Q = \parser_$signal$1).
+Adding SRST signal on $248 ($dff) from module top (D = \pin_stepper_1__step.stepper_1__step__o, Q = $signal$85, rval = 1'0).
+Adding SRST signal on $247 ($dff) from module top (D = $procmux$680_Y, Q = \parser_$signal, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$2422 ($sdff) from module top (D = $procmux$678_Y, Q = \parser_$signal).
+Adding SRST signal on $246 ($dff) from module top (D = \pin_stepper_0__step.stepper_0__step__o, Q = $signal, rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:262:slice$2061 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:262:slice$2046 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:262:slice$2046 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:262:slice$2046 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:262:slice$2046 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:262:slice$2046 ($dffe) from module top.
+
+2.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 197 unused cells and 193 unused wires.
+<suppressed ~279 debug messages>
+
+2.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~47 debug messages>
+
+2.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~72 debug messages>
+
+2.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~363 debug messages>
+Removed a total of 121 cells.
+
+2.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 120 unused wires.
+<suppressed ~1 debug messages>
+
+2.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.12.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.12.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~78 debug messages>
+
+2.12.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.12.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.12.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.12.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.12.23. Finished OPT passes. (There is nothing left to do.)
+
+2.13. Executing WREDUCE pass (reducing word size of cells).
+Removed top 62 bits (of 64) from port B of cell top.$81 ($add).
+Removed top 1 bits (of 65) from port Y of cell top.$81 ($add).
+Removed top 62 bits (of 64) from port B of cell top.$84 ($sub).
+Removed top 1 bits (of 65) from port Y of cell top.$84 ($sub).
+Removed top 62 bits (of 64) from port B of cell top.$102 ($add).
+Removed top 1 bits (of 65) from port Y of cell top.$102 ($add).
+Removed top 62 bits (of 64) from port B of cell top.$105 ($sub).
+Removed top 1 bits (of 65) from port Y of cell top.$105 ($sub).
+Removed top 62 bits (of 64) from port B of cell top.$123 ($add).
+Removed top 1 bits (of 65) from port Y of cell top.$123 ($add).
+Removed top 62 bits (of 64) from port B of cell top.$126 ($sub).
+Removed top 1 bits (of 65) from port Y of cell top.$126 ($sub).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$1746 ($ne).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$1756 ($ne).
+Removed top 1 bits (of 4) from port Y of cell top.$211 ($add).
+Removed top 1 bits (of 3) from port B of cell top.$procmux$429_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top.$procmux$430_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell top.$procmux$431_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top.$procmux$439_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top.$procmux$520_CMP0 ($eq).
+Removed cell top.$procmux$525 ($mux).
+Removed cell top.$procmux$527 ($mux).
+Removed cell top.$procmux$529 ($mux).
+Removed cell top.$procmux$546 ($mux).
+Removed cell top.$procmux$548 ($mux).
+Removed cell top.$procmux$552 ($mux).
+Removed cell top.$procmux$566 ($mux).
+Removed top 1 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2218 ($ne).
+Removed cell top.$procmux$571 ($mux).
+Removed top 2 bits (of 3) from port B of cell top.$procmux$573_CMP0 ($eq).
+Removed cell top.$procmux$579 ($mux).
+Removed cell top.$procmux$590 ($mux).
+Removed cell top.$procmux$592 ($mux).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2224 ($ne).
+Removed cell top.$procmux$602 ($mux).
+Removed cell top.$procmux$610 ($mux).
+Removed cell top.$procmux$612 ($mux).
+Removed cell top.$procmux$620 ($mux).
+Removed cell top.$procmux$622 ($mux).
+Removed cell top.$procmux$634 ($mux).
+Removed top 1 bits (of 3) from mux cell top.$procmux$638 ($mux).
+Removed top 1 bits (of 3) from mux cell top.$procmux$640 ($mux).
+Removed cell top.$procmux$645 ($mux).
+Removed top 1 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2056 ($ne).
+Removed top 1 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2073 ($ne).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2081 ($ne).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2097 ($ne).
+Removed top 1 bits (of 4) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2054 ($ne).
+Removed top 3 bits (of 5) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2037 ($ne).
+Removed top 1 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2015 ($ne).
+Removed top 6 bits (of 8) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2001 ($ne).
+Removed top 1 bits (of 10) from port Y of cell top.$flatten\parser.\fifo.$10 ($add).
+Removed top 1 bits (of 10) from port Y of cell top.$flatten\parser.\fifo.$19 ($add).
+Removed top 2 bits (of 11) from port Y of cell top.$flatten\parser.\fifo.$36 ($sub).
+Removed top 1 bits (of 10) from port B of cell top.$flatten\parser.\fifo.$36 ($sub).
+Removed top 2 bits (of 11) from port Y of cell top.$flatten\parser.\fifo.$41 ($sub).
+Removed top 1 bits (of 10) from port A of cell top.$flatten\parser.\fifo.$41 ($sub).
+Removed top 1 bits (of 8) from port Y of cell top.$flatten\parser.\interf.$27 ($add).
+Removed cell top.$flatten\parser.\interf.$procmux$1604 ($mux).
+Removed cell top.$flatten\parser.\interf.$procmux$1606 ($mux).
+Removed top 1 bits (of 3) from port B of cell top.$flatten\parser.\interf.$procmux$1617_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top.$flatten\parser.\interf.$procmux$1652_CMP0 ($eq).
+Removed cell top.$flatten\parser.\interf.$procmux$1659 ($mux).
+Removed top 2 bits (of 3) from port B of cell top.$flatten\parser.\interf.$procmux$1664_CMP0 ($eq).
+Removed cell top.$flatten\parser.$procmux$1544 ($mux).
+Removed cell top.$flatten\parser.$procmux$1542 ($mux).
+Removed cell top.$flatten\parser.$procmux$1538 ($mux).
+Removed cell top.$flatten\parser.$procmux$1532 ($mux).
+Removed cell top.$flatten\parser.$procmux$1528 ($mux).
+Removed cell top.$flatten\parser.$procmux$1523 ($mux).
+Removed cell top.$flatten\parser.$procmux$1516 ($mux).
+Removed cell top.$flatten\parser.$procmux$1514 ($mux).
+Removed cell top.$flatten\parser.$procmux$1512 ($mux).
+Removed cell top.$flatten\parser.$procmux$1505 ($mux).
+Removed top 1 bits (of 3) from mux cell top.$flatten\parser.$procmux$1495 ($mux).
+Removed cell top.$flatten\parser.$procmux$1490 ($mux).
+Removed cell top.$flatten\parser.$procmux$1487 ($mux).
+Removed top 1 bits (of 3) from mux cell top.$flatten\parser.$procmux$1483 ($mux).
+Removed cell top.$flatten\parser.$procmux$1457 ($mux).
+Removed top 1 bits (of 2) from port B of cell top.$flatten\parser.$procmux$1455_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell top.$flatten\parser.$procmux$1449_CMP0 ($eq).
+Removed cell top.$flatten\parser.$procmux$1416 ($mux).
+Removed cell top.$flatten\parser.$procmux$1412 ($mux).
+Removed top 1 bits (of 3) from port B of cell top.$flatten\parser.$procmux$1406_CMP0 ($eq).
+Removed cell top.$flatten\parser.$procmux$1399 ($mux).
+Removed top 1 bits (of 3) from port B of cell top.$flatten\parser.$procmux$1395_CMP0 ($eq).
+Removed cell top.$flatten\parser.$procmux$1393 ($mux).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2246 ($ne).
+Removed top 1 bits (of 3) from port Y of cell top.$flatten\parser.$139 ($add).
+Removed top 1 bits (of 4) from port Y of cell top.$flatten\parser.$29 ($add).
+Removed top 1 bits (of 5) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2113 ($ne).
+Removed top 1 bits (of 6) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2107 ($ne).
+Removed top 2 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2103 ($ne).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2129 ($ne).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2127 ($ne).
+Removed top 2 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2117 ($ne).
+Removed top 1 bits (of 4) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$2115 ($ne).
+Removed cell top.$flatten\polynomal.$procmux$1349 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1345 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1343 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1325 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1316 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1307 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1298 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1293 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1289 ($mux).
+Removed top 1 bits (of 2) from port B of cell top.$flatten\polynomal.$procmux$1286_CMP0 ($eq).
+Removed cell top.$flatten\polynomal.$procmux$1284 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1280 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1272 ($mux).
+Removed cell top.$flatten\polynomal.$procmux$1263 ($mux).
+Removed top 1 bits (of 5) from port Y of cell top.$flatten\polynomal.$170 ($add).
+Removed top 1 bits (of 15) from port Y of cell top.$flatten\polynomal.$159 ($add).
+Removed top 1 bits (of 28) from port A of cell top.$flatten\polynomal.$146 ($add).
+Removed top 1 bits (of 40) from port Y of cell top.$flatten\polynomal.$146 ($add).
+Removed top 2 bits (of 41) from port Y of cell top.$flatten\polynomal.$131 ($add).
+Removed top 1 bits (of 40) from port A of cell top.$flatten\polynomal.$131 ($add).
+Removed top 1 bits (of 40) from port Y of cell top.$flatten\polynomal.$129 ($add).
+Removed top 1 bits (of 28) from port A of cell top.$flatten\polynomal.$111 ($add).
+Removed top 1 bits (of 40) from port Y of cell top.$flatten\polynomal.$111 ($add).
+Removed top 2 bits (of 41) from port Y of cell top.$flatten\polynomal.$96 ($add).
+Removed top 1 bits (of 40) from port A of cell top.$flatten\polynomal.$96 ($add).
+Removed top 1 bits (of 40) from port Y of cell top.$flatten\polynomal.$94 ($add).
+Removed top 1 bits (of 28) from port A of cell top.$flatten\polynomal.$76 ($add).
+Removed top 1 bits (of 40) from port Y of cell top.$flatten\polynomal.$76 ($add).
+Removed top 2 bits (of 41) from port Y of cell top.$flatten\polynomal.$61 ($add).
+Removed top 1 bits (of 40) from port A of cell top.$flatten\polynomal.$61 ($add).
+Removed top 1 bits (of 40) from port Y of cell top.$flatten\polynomal.$59 ($add).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$1926 ($ne).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$1947 ($ne).
+Removed top 1 bits (of 3) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$1853 ($ne).
+Removed cell top.$flatten\laserhead.$procmux$1209 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1203 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1199 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1197 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1190 ($mux).
+Removed top 1 bits (of 3) from mux cell top.$flatten\laserhead.$procmux$1188 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1184 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1179 ($mux).
+Removed top 2 bits (of 3) from mux cell top.$flatten\laserhead.$procmux$1173 ($mux).
+Removed top 2 bits (of 3) from mux cell top.$flatten\laserhead.$procmux$1166 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1162 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1159 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1157 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1151 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1144 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1142 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1140 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1136 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1125 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1109 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1107 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1087 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1084 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1057 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1055 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1044 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1028 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1017 ($mux).
+Removed top 2 bits (of 3) from port B of cell top.$flatten\laserhead.$procmux$1014_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top.$flatten\laserhead.$procmux$1013_CMP0 ($eq).
+Removed cell top.$flatten\laserhead.$procmux$1011 ($mux).
+Removed top 1 bits (of 3) from port B of cell top.$flatten\laserhead.$procmux$1010_CMP0 ($eq).
+Removed cell top.$flatten\laserhead.$procmux$1008 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1006 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1003 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$1001 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$987 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$985 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$983 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$979 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$974 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$968 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$965 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$962 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$960 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$958 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$956 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$914 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$912 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$909 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$907 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$818 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$815 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$812 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$810 ($mux).
+Removed cell top.$flatten\laserhead.$procmux$808 ($mux).
+Removed top 1 bits (of 14) from port Y of cell top.$flatten\laserhead.$331 ($add).
+Removed top 1 bits (of 8) from port Y of cell top.$flatten\laserhead.$201 ($sub).
+Removed top 1 bits (of 10) from port Y of cell top.$flatten\laserhead.$194 ($add).
+Removed top 1 bits (of 7) from port Y of cell top.$flatten\laserhead.$169 ($add).
+Removed top 1 bits (of 26) from port Y of cell top.$flatten\laserhead.$117 ($add).
+Removed top 1 bits (of 19) from port Y of cell top.$flatten\laserhead.$9 ($add).
+Removed cell top.$flatten\prism_driver.$procmux$779 ($mux).
+Removed top 1 bits (of 11) from port Y of cell top.$flatten\prism_driver.$53 ($add).
+Removed top 1 bits (of 22) from port Y of cell top.$flatten\prism_driver.$40 ($add).
+Removed top 1 bits (of 11) from port Y of cell top.$flatten\prism_driver.$29 ($add).
+Removed top 1 bits (of 11) from port Y of cell top.$flatten\prism_driver.$26 ($sub).
+Removed top 1 bits (of 12) from port Y of cell top.$flatten\cd_sync.$7 ($add).
+Removed top 1 bits (of 10) from port Y of cell top.$flatten\parser.\fifo.$34 ($sub).
+Removed top 1 bits (of 10) from port Y of cell top.$flatten\parser.\fifo.$39 ($sub).
+Removed top 1 bits (of 65) from wire top.$100.
+Removed top 1 bits (of 65) from wire top.$103.
+Removed top 1 bits (of 65) from wire top.$79.
+Removed top 1 bits (of 65) from wire top.$82.
+Removed top 1 bits (of 12) from wire top.$flatten\cd_sync.$5.
+Removed top 1 bits (of 26) from wire top.$flatten\laserhead.$115.
+Removed top 1 bits (of 7) from wire top.$flatten\laserhead.$167.
+Removed top 1 bits (of 8) from wire top.$flatten\laserhead.$199.
+Removed top 1 bits (of 14) from wire top.$flatten\laserhead.$329.
+Removed top 2 bits (of 3) from wire top.$flatten\laserhead.$procmux$1166_Y.
+Removed top 2 bits (of 3) from wire top.$flatten\laserhead.$procmux$1173_Y.
+Removed top 1 bits (of 3) from wire top.$flatten\laserhead.$procmux$1188_Y.
+Removed top 1 bits (of 64) from wire top.$flatten\laserhead.$procmux$808_Y.
+Removed top 1 bits (of 64) from wire top.$flatten\laserhead.$procmux$810_Y.
+Removed top 1 bits (of 64) from wire top.$flatten\laserhead.$procmux$812_Y.
+Removed top 1 bits (of 64) from wire top.$flatten\laserhead.$procmux$815_Y.
+Removed top 1 bits (of 64) from wire top.$flatten\laserhead.$procmux$818_Y.
+Removed top 1 bits (of 3) from wire top.$flatten\parser.$137.
+Removed top 1 bits (of 3) from wire top.$flatten\parser.$procmux$1483_Y.
+Removed top 1 bits (of 3) from wire top.$flatten\parser.$procmux$1495_Y.
+Removed top 1 bits (of 10) from wire top.$flatten\parser.\fifo.$17.
+Removed top 2 bits (of 11) from wire top.$flatten\parser.\fifo.$32.
+Removed top 1 bits (of 10) from wire top.$flatten\parser.\fifo.$33.
+Removed top 1 bits (of 10) from wire top.$flatten\parser.\fifo.$8.
+Removed top 1 bits (of 8) from wire top.$flatten\parser.\interf.$25.
+Removed top 1 bits (of 40) from wire top.$flatten\polynomal.$128.
+Removed top 1 bits (of 15) from wire top.$flatten\polynomal.$157.
+Removed top 1 bits (of 40) from wire top.$flatten\polynomal.$58.
+Removed top 1 bits (of 40) from wire top.$flatten\polynomal.$93.
+Removed top 1 bits (of 11) from wire top.$flatten\prism_driver.$24.
+Removed top 1 bits (of 11) from wire top.$flatten\prism_driver.$27.
+Removed top 1 bits (of 3) from wire top.$procmux$638_Y.
+Removed top 1 bits (of 3) from wire top.$procmux$640_Y.
+Removed top 5 bits (of 8) from wire top.parser_pinstate.
+
+2.14. Executing PEEPOPT pass (run peephole optimizers).
+
+2.15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 136 unused wires.
+<suppressed ~1 debug messages>
+
+2.16. Executing SHARE pass (SAT-based resource sharing).
+
+2.17. Executing TECHMAP pass (map to technology primitives).
+
+2.17.1. Executing Verilog-2005 frontend: /share/cmp2lut.v
+Parsing Verilog input from `/share/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.17.2. Continuing TECHMAP pass.
+Using template $paramod$1589de7c7e0b2319786fc7a60d78b5cf9da00c8d\_90_lut_cmp_ for cells of type $lt.
+Using template $paramod$af8a73a536adbd1e5b950276080e1603ed553c59\_90_lut_cmp_ for cells of type $ge.
+Using template $paramod$95cc903f66ace9a14a4cfd768767dedcebc73225\_90_lut_cmp_ for cells of type $lt.
+Using template $paramod$1cc71f4d55803c3cba3481201e39031ed07e5e79\_90_lut_cmp_ for cells of type $ge.
+Using template $paramod$e2077504cd0ce5853f3401e93c659ecb9b29250e\_90_lut_cmp_ for cells of type $ge.
+Using template $paramod$6dd0a251ade966e125836c7dab300d38483cacae\_90_lut_cmp_ for cells of type $le.
+Using template $paramod$85f182b17da0e22fbd5c95ce41cc877b6ba8d39c\_90_lut_cmp_ for cells of type $ge.
+No more expansions possible.
+<suppressed ~918 debug messages>
+
+2.18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~5 debug messages>
+
+2.19. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 26 unused wires.
+<suppressed ~1 debug messages>
+
+2.20. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module top:
+  creating $macc model for $102 ($add).
+  creating $macc model for $105 ($sub).
+  creating $macc model for $123 ($add).
+  creating $macc model for $126 ($sub).
+  creating $macc model for $211 ($add).
+  creating $macc model for $81 ($add).
+  creating $macc model for $84 ($sub).
+  creating $macc model for $flatten\cd_sync.$7 ($add).
+  creating $macc model for $flatten\laserhead.$117 ($add).
+  creating $macc model for $flatten\laserhead.$169 ($add).
+  creating $macc model for $flatten\laserhead.$194 ($add).
+  creating $macc model for $flatten\laserhead.$201 ($sub).
+  creating $macc model for $flatten\laserhead.$331 ($add).
+  creating $macc model for $flatten\laserhead.$9 ($add).
+  creating $macc model for $flatten\parser.$139 ($add).
+  creating $macc model for $flatten\parser.$29 ($add).
+  creating $macc model for $flatten\parser.\fifo.$10 ($add).
+  creating $macc model for $flatten\parser.\fifo.$19 ($add).
+  creating $macc model for $flatten\parser.\fifo.$34 ($sub).
+  creating $macc model for $flatten\parser.\fifo.$36 ($sub).
+  creating $macc model for $flatten\parser.\fifo.$39 ($sub).
+  creating $macc model for $flatten\parser.\fifo.$41 ($sub).
+  creating $macc model for $flatten\parser.\interf.$27 ($add).
+  creating $macc model for $flatten\polynomal.$111 ($add).
+  creating $macc model for $flatten\polynomal.$126 ($add).
+  creating $macc model for $flatten\polynomal.$129 ($add).
+  creating $macc model for $flatten\polynomal.$131 ($add).
+  creating $macc model for $flatten\polynomal.$146 ($add).
+  creating $macc model for $flatten\polynomal.$159 ($add).
+  creating $macc model for $flatten\polynomal.$170 ($add).
+  creating $macc model for $flatten\polynomal.$56 ($add).
+  creating $macc model for $flatten\polynomal.$59 ($add).
+  creating $macc model for $flatten\polynomal.$61 ($add).
+  creating $macc model for $flatten\polynomal.$76 ($add).
+  creating $macc model for $flatten\polynomal.$91 ($add).
+  creating $macc model for $flatten\polynomal.$94 ($add).
+  creating $macc model for $flatten\polynomal.$96 ($add).
+  creating $macc model for $flatten\prism_driver.$26 ($sub).
+  creating $macc model for $flatten\prism_driver.$29 ($add).
+  creating $macc model for $flatten\prism_driver.$40 ($add).
+  creating $macc model for $flatten\prism_driver.$53 ($add).
+  merging $macc model for $flatten\polynomal.$94 into $flatten\polynomal.$96.
+  merging $macc model for $flatten\polynomal.$91 into $flatten\polynomal.$96.
+  merging $macc model for $flatten\polynomal.$59 into $flatten\polynomal.$61.
+  merging $macc model for $flatten\polynomal.$56 into $flatten\polynomal.$61.
+  merging $macc model for $flatten\polynomal.$129 into $flatten\polynomal.$131.
+  merging $macc model for $flatten\polynomal.$126 into $flatten\polynomal.$131.
+  merging $macc model for $flatten\parser.\fifo.$39 into $flatten\parser.\fifo.$41.
+  merging $macc model for $flatten\parser.\fifo.$34 into $flatten\parser.\fifo.$36.
+  creating $alu model for $macc $flatten\polynomal.$76.
+  creating $alu model for $macc $flatten\polynomal.$170.
+  creating $alu model for $macc $flatten\polynomal.$159.
+  creating $alu model for $macc $flatten\polynomal.$146.
+  creating $alu model for $macc $flatten\prism_driver.$26.
+  creating $alu model for $macc $flatten\prism_driver.$29.
+  creating $alu model for $macc $flatten\polynomal.$111.
+  creating $alu model for $macc $flatten\parser.\interf.$27.
+  creating $alu model for $macc $flatten\prism_driver.$40.
+  creating $alu model for $macc $flatten\prism_driver.$53.
+  creating $alu model for $macc $flatten\parser.\fifo.$19.
+  creating $alu model for $macc $flatten\parser.\fifo.$10.
+  creating $alu model for $macc $flatten\parser.$29.
+  creating $alu model for $macc $flatten\parser.$139.
+  creating $alu model for $macc $flatten\laserhead.$9.
+  creating $alu model for $macc $flatten\laserhead.$331.
+  creating $alu model for $macc $flatten\laserhead.$201.
+  creating $alu model for $macc $flatten\laserhead.$194.
+  creating $alu model for $macc $flatten\laserhead.$169.
+  creating $alu model for $macc $flatten\laserhead.$117.
+  creating $alu model for $macc $flatten\cd_sync.$7.
+  creating $alu model for $macc $84.
+  creating $alu model for $macc $81.
+  creating $alu model for $macc $211.
+  creating $alu model for $macc $126.
+  creating $alu model for $macc $123.
+  creating $alu model for $macc $105.
+  creating $alu model for $macc $102.
+  creating $macc cell for $flatten\parser.\fifo.$41: $auto$alumacc.cc:365:replace_macc$2478
+  creating $macc cell for $flatten\polynomal.$131: $auto$alumacc.cc:365:replace_macc$2479
+  creating $macc cell for $flatten\polynomal.$96: $auto$alumacc.cc:365:replace_macc$2480
+  creating $macc cell for $flatten\parser.\fifo.$36: $auto$alumacc.cc:365:replace_macc$2481
+  creating $macc cell for $flatten\polynomal.$61: $auto$alumacc.cc:365:replace_macc$2482
+  creating $alu model for $110 ($gt): new $alu
+  creating $alu model for $112 ($lt): new $alu
+  creating $alu model for $68 ($gt): new $alu
+  creating $alu model for $70 ($lt): new $alu
+  creating $alu model for $89 ($gt): new $alu
+  creating $alu model for $91 ($lt): new $alu
+  creating $alu model for $flatten\laserhead.$104 ($gt): new $alu
+  creating $alu model for $flatten\laserhead.$11 ($lt): new $alu
+  creating $alu model for $flatten\laserhead.$114 ($gt): new $alu
+  creating $alu model for $flatten\laserhead.$119 ($ge): new $alu
+  creating $alu model for $flatten\laserhead.$191 ($ge): new $alu
+  creating $alu model for $flatten\laserhead.$221 ($ge): new $alu
+  creating $alu model for $flatten\laserhead.$241 ($ge): new $alu
+  creating $alu model for $flatten\laserhead.$257 ($lt): merged with $flatten\laserhead.$191.
+  creating $alu model for $flatten\laserhead.$322 ($ge): new $alu
+  creating $alu model for $flatten\parser.$143 ($gt): new $alu
+  creating $alu model for $flatten\parser.$145 ($lt): new $alu
+  creating $alu model for $flatten\parser.$4 ($le): new $alu
+  creating $alu model for $flatten\parser.\fifo.$31 ($le): new $alu
+  creating $alu model for $flatten\parser.\interf.$14 ($lt): new $alu
+  creating $alu model for $flatten\parser.\interf.$18 ($lt): new $alu
+  creating $alu model for $flatten\polynomal.$100 ($lt): new $alu
+  creating $alu model for $flatten\polynomal.$19 ($gt): new $alu
+  creating $alu model for $flatten\polynomal.$21 ($lt): merged with $flatten\polynomal.$19.
+  creating $alu model for $flatten\polynomal.$26 ($gt): new $alu
+  creating $alu model for $flatten\polynomal.$28 ($lt): merged with $flatten\polynomal.$26.
+  creating $alu model for $flatten\polynomal.$33 ($gt): new $alu
+  creating $alu model for $flatten\polynomal.$35 ($lt): merged with $flatten\polynomal.$33.
+  creating $alu model for $flatten\prism_driver.$13 ($gt): new $alu
+  creating $alu model for $flatten\prism_driver.$15 ($ge): new $alu
+  creating $alu model for $flatten\prism_driver.$19 ($lt): merged with $flatten\prism_driver.$13.
+  creating $alu model for $flatten\prism_driver.$21 ($lt): new $alu
+  creating $alu model for $flatten\prism_driver.$31 ($ge): new $alu
+  creating $alu model for $flatten\prism_driver.$50 ($lt): new $alu
+  creating $alu model for $flatten\prism_driver.$55 ($lt): new $alu
+  creating $alu cell for $flatten\prism_driver.$55: $auto$alumacc.cc:485:replace_alu$2513
+  creating $alu cell for $flatten\prism_driver.$50: $auto$alumacc.cc:485:replace_alu$2518
+  creating $alu cell for $flatten\prism_driver.$31: $auto$alumacc.cc:485:replace_alu$2523
+  creating $alu cell for $flatten\prism_driver.$21: $auto$alumacc.cc:485:replace_alu$2536
+  creating $alu cell for $flatten\prism_driver.$13, $flatten\prism_driver.$19: $auto$alumacc.cc:485:replace_alu$2541
+  creating $alu cell for $flatten\polynomal.$33, $flatten\polynomal.$35: $auto$alumacc.cc:485:replace_alu$2552
+  creating $alu cell for $flatten\polynomal.$26, $flatten\polynomal.$28: $auto$alumacc.cc:485:replace_alu$2565
+  creating $alu cell for $flatten\polynomal.$19, $flatten\polynomal.$21: $auto$alumacc.cc:485:replace_alu$2578
+  creating $alu cell for $flatten\polynomal.$100: $auto$alumacc.cc:485:replace_alu$2591
+  creating $alu cell for $flatten\parser.\interf.$18: $auto$alumacc.cc:485:replace_alu$2596
+  creating $alu cell for $flatten\parser.\interf.$14: $auto$alumacc.cc:485:replace_alu$2607
+  creating $alu cell for $flatten\parser.\fifo.$31: $auto$alumacc.cc:485:replace_alu$2618
+  creating $alu cell for $flatten\parser.$4: $auto$alumacc.cc:485:replace_alu$2627
+  creating $alu cell for $flatten\parser.$145: $auto$alumacc.cc:485:replace_alu$2640
+  creating $alu cell for $flatten\parser.$143: $auto$alumacc.cc:485:replace_alu$2651
+  creating $alu cell for $flatten\laserhead.$322: $auto$alumacc.cc:485:replace_alu$2656
+  creating $alu cell for $flatten\laserhead.$241: $auto$alumacc.cc:485:replace_alu$2665
+  creating $alu cell for $flatten\laserhead.$221: $auto$alumacc.cc:485:replace_alu$2674
+  creating $alu cell for $flatten\laserhead.$191, $flatten\laserhead.$257: $auto$alumacc.cc:485:replace_alu$2683
+  creating $alu cell for $flatten\laserhead.$119: $auto$alumacc.cc:485:replace_alu$2696
+  creating $alu cell for $flatten\laserhead.$114: $auto$alumacc.cc:485:replace_alu$2705
+  creating $alu cell for $flatten\laserhead.$11: $auto$alumacc.cc:485:replace_alu$2716
+  creating $alu cell for $flatten\laserhead.$104: $auto$alumacc.cc:485:replace_alu$2721
+  creating $alu cell for $91: $auto$alumacc.cc:485:replace_alu$2726
+  creating $alu cell for $89: $auto$alumacc.cc:485:replace_alu$2733
+  creating $alu cell for $70: $auto$alumacc.cc:485:replace_alu$2746
+  creating $alu cell for $68: $auto$alumacc.cc:485:replace_alu$2753
+  creating $alu cell for $112: $auto$alumacc.cc:485:replace_alu$2766
+  creating $alu cell for $110: $auto$alumacc.cc:485:replace_alu$2773
+  creating $alu cell for $102: $auto$alumacc.cc:485:replace_alu$2786
+  creating $alu cell for $105: $auto$alumacc.cc:485:replace_alu$2789
+  creating $alu cell for $123: $auto$alumacc.cc:485:replace_alu$2792
+  creating $alu cell for $126: $auto$alumacc.cc:485:replace_alu$2795
+  creating $alu cell for $211: $auto$alumacc.cc:485:replace_alu$2798
+  creating $alu cell for $81: $auto$alumacc.cc:485:replace_alu$2801
+  creating $alu cell for $84: $auto$alumacc.cc:485:replace_alu$2804
+  creating $alu cell for $flatten\cd_sync.$7: $auto$alumacc.cc:485:replace_alu$2807
+  creating $alu cell for $flatten\laserhead.$117: $auto$alumacc.cc:485:replace_alu$2810
+  creating $alu cell for $flatten\laserhead.$169: $auto$alumacc.cc:485:replace_alu$2813
+  creating $alu cell for $flatten\laserhead.$194: $auto$alumacc.cc:485:replace_alu$2816
+  creating $alu cell for $flatten\laserhead.$201: $auto$alumacc.cc:485:replace_alu$2819
+  creating $alu cell for $flatten\laserhead.$331: $auto$alumacc.cc:485:replace_alu$2822
+  creating $alu cell for $flatten\laserhead.$9: $auto$alumacc.cc:485:replace_alu$2825
+  creating $alu cell for $flatten\parser.$139: $auto$alumacc.cc:485:replace_alu$2828
+  creating $alu cell for $flatten\parser.$29: $auto$alumacc.cc:485:replace_alu$2831
+  creating $alu cell for $flatten\parser.\fifo.$10: $auto$alumacc.cc:485:replace_alu$2834
+  creating $alu cell for $flatten\parser.\fifo.$19: $auto$alumacc.cc:485:replace_alu$2837
+  creating $alu cell for $flatten\prism_driver.$53: $auto$alumacc.cc:485:replace_alu$2840
+  creating $alu cell for $flatten\prism_driver.$40: $auto$alumacc.cc:485:replace_alu$2843
+  creating $alu cell for $flatten\parser.\interf.$27: $auto$alumacc.cc:485:replace_alu$2846
+  creating $alu cell for $flatten\polynomal.$111: $auto$alumacc.cc:485:replace_alu$2849
+  creating $alu cell for $flatten\prism_driver.$15: $auto$alumacc.cc:485:replace_alu$2852
+  creating $alu cell for $flatten\prism_driver.$29: $auto$alumacc.cc:485:replace_alu$2861
+  creating $alu cell for $flatten\prism_driver.$26: $auto$alumacc.cc:485:replace_alu$2864
+  creating $alu cell for $flatten\polynomal.$146: $auto$alumacc.cc:485:replace_alu$2867
+  creating $alu cell for $flatten\polynomal.$159: $auto$alumacc.cc:485:replace_alu$2870
+  creating $alu cell for $flatten\polynomal.$170: $auto$alumacc.cc:485:replace_alu$2873
+  creating $alu cell for $flatten\polynomal.$76: $auto$alumacc.cc:485:replace_alu$2876
+  created 58 $alu and 5 $macc cells.
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~13 debug messages>
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~69 debug messages>
+
+2.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New input vector for $reduce_or cell $auto$opt_dff.cc:254:combine_resets$1731: { $auto$rtlil.cc:2367:Not$1720 $flatten\prism_driver.$36 $auto$rtlil.cc:2367:Not$2533 $auto$rtlil.cc:2370:ReduceAnd$2529 }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$1019: { $auto$opt_reduce.cc:134:opt_pmux$2882 $flatten\laserhead.$procmux$1005_CMP $auto$opt_reduce.cc:134:opt_pmux$2880 }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$1201: { $flatten\laserhead.$procmux$1193_CMP $flatten\laserhead.$procmux$1014_CMP $auto$opt_reduce.cc:134:opt_pmux$2884 }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$902: { $auto$opt_reduce.cc:134:opt_pmux$2886 $flatten\laserhead.$procmux$1020_CMP }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$972: { $flatten\laserhead.$procmux$1120_CMP $auto$opt_reduce.cc:134:opt_pmux$2888 $flatten\laserhead.$procmux$1005_CMP }
+    New ctrl vector for $pmux cell $flatten\laserhead.$procmux$998: { $auto$opt_reduce.cc:134:opt_pmux$2892 $auto$opt_reduce.cc:134:opt_pmux$2890 }
+    New ctrl vector for $pmux cell $flatten\parser.$procmux$1525: { $flatten\parser.$procmux$1406_CMP $auto$opt_reduce.cc:134:opt_pmux$2894 }
+    New ctrl vector for $pmux cell $flatten\polynomal.$procmux$1347: { $flatten\polynomal.$procmux$1286_CMP $auto$opt_reduce.cc:134:opt_pmux$2896 }
+    New ctrl vector for $pmux cell $procmux$588: { $procmux$573_CMP $auto$opt_reduce.cc:134:opt_pmux$2898 }
+    New ctrl vector for $pmux cell $procmux$629: { $procmux$573_CMP $procmux$520_CMP $auto$opt_reduce.cc:134:opt_pmux$2900 $auto$opt_reduce.cc:134:opt_pmux$1716 $procmux$630_CMP }
+  Optimizing cells in module \top.
+Performed a total of 10 changes.
+
+2.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.21.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 9 unused cells and 47 unused wires.
+<suppressed ~10 debug messages>
+
+2.21.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.21.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.21.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~69 debug messages>
+
+2.21.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.21.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.21.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.21.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.21.16. Finished OPT passes. (There is nothing left to do.)
+
+2.22. Executing MEMORY pass.
+
+2.22.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.22.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.22.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.22.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.22.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.22.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.22.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.22.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.22.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.22.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.24. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+mapping memory top.parser.fifo.memory via $__ICE40_RAM4K_
+<suppressed ~55 debug messages>
+
+2.25. Executing TECHMAP pass (map to technology primitives).
+
+2.25.1. Executing Verilog-2005 frontend: /share/ice40/brams_map.v
+Parsing Verilog input from `/share/ice40/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_RAM4K_'.
+Successfully finished Verilog frontend.
+
+2.25.2. Executing Verilog-2005 frontend: /share/ice40/spram_map.v
+Parsing Verilog input from `/share/ice40/spram_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_SPRAM_'.
+Successfully finished Verilog frontend.
+
+2.25.3. Continuing TECHMAP pass.
+Using template $paramod$fb4abf25c05f7bf8162eddff7f8fa5d69806ff00\$__ICE40_RAM4K_ for cells of type $__ICE40_RAM4K_.
+No more expansions possible.
+<suppressed ~33 debug messages>
+
+2.26. Executing ICE40_BRAMINIT pass.
+
+2.27. Executing OPT pass (performing simple optimizations).
+
+2.27.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~152 debug messages>
+
+2.27.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+2.27.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:262:slice$1812 ($sdffe) from module top (D = $flatten\polynomal.$procmux$1318_Y [0], Q = $flatten\polynomal.$signal$57 [0]).
+Adding EN signal on $auto$ff.cc:262:slice$1781 ($sdffe) from module top (D = $flatten\polynomal.$procmux$1300_Y [0], Q = $flatten\polynomal.$signal$92 [0]).
+Adding EN signal on $auto$ff.cc:262:slice$1750 ($sdffe) from module top (D = $flatten\polynomal.$procmux$1282_Y [0], Q = $flatten\polynomal.$signal$127 [0]).
+Adding EN signal on $auto$ff.cc:262:slice$1732 ($sdff) from module top (D = $flatten\prism_driver.$procmux$795_Y [0], Q = \prism_driver.delay [0]).
+Removing always-active EN on $auto$mem.cc:1134:emulate_transparency$2902 ($dffe) from module top.
+
+2.27.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 10 unused cells and 144 unused wires.
+<suppressed ~11 debug messages>
+
+2.27.5. Rerunning OPT passes. (Removed registers in this run.)
+
+2.27.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~4 debug messages>
+
+2.27.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+2.27.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.27.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+2.27.10. Finished fast OPT passes.
+
+2.28. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.29. Executing OPT pass (performing simple optimizations).
+
+2.29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.29.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~64 debug messages>
+
+2.29.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New input vector for $reduce_and cell $auto$opt_dff.cc:220:make_patterns_logic$3003: { $auto$opt_dff.cc:194:make_patterns_logic$3000 $auto$opt_dff.cc:194:make_patterns_logic$1755 $auto$opt_dff.cc:194:make_patterns_logic$1753 $auto$opt_dff.cc:194:make_patterns_logic$1751 }
+    Consolidated identical input bits for $mux cell $flatten\laserhead.$procmux$1146:
+      Old ports: A=24'110011011111111001011111, B=24'000011011101111011001000, Y=$flatten\laserhead.$procmux$1146_Y
+      New ports: A=2'01, B=2'10, Y={ $flatten\laserhead.$procmux$1146_Y [7] $flatten\laserhead.$procmux$1146_Y [0] }
+      New connections: { $flatten\laserhead.$procmux$1146_Y [23:8] $flatten\laserhead.$procmux$1146_Y [6:1] } = { $flatten\laserhead.$procmux$1146_Y [0] $flatten\laserhead.$procmux$1146_Y [0] 8'00110111 $flatten\laserhead.$procmux$1146_Y [0] 7'1111010 $flatten\laserhead.$procmux$1146_Y [0] 1'1 $flatten\laserhead.$procmux$1146_Y [0] $flatten\laserhead.$procmux$1146_Y [0] }
+    Consolidated identical input bits for $mux cell $flatten\laserhead.$procmux$1153:
+      Old ports: A=3'001, B=3'011, Y=$flatten\laserhead.$procmux$1153_Y
+      New ports: A=1'0, B=1'1, Y=$flatten\laserhead.$procmux$1153_Y [1]
+      New connections: { $flatten\laserhead.$procmux$1153_Y [2] $flatten\laserhead.$procmux$1153_Y [0] } = 2'01
+    Consolidated identical input bits for $mux cell $flatten\laserhead.$procmux$1168:
+      Old ports: A={ 2'10 $auto$wreduce.cc:454:run$2438 [0] }, B=3'110, Y=$flatten\laserhead.$procmux$1168_Y
+      New ports: A={ 1'0 $auto$wreduce.cc:454:run$2438 [0] }, B=2'10, Y=$flatten\laserhead.$procmux$1168_Y [1:0]
+      New connections: $flatten\laserhead.$procmux$1168_Y [2] = 1'1
+    Consolidated identical input bits for $mux cell $flatten\laserhead.$procmux$1177:
+      Old ports: A={ 2'10 $auto$wreduce.cc:454:run$2439 [0] }, B=3'100, Y=$flatten\laserhead.$procmux$1177_Y
+      New ports: A=$auto$wreduce.cc:454:run$2439 [0], B=1'0, Y=$flatten\laserhead.$procmux$1177_Y [0]
+      New connections: $flatten\laserhead.$procmux$1177_Y [2:1] = 2'10
+    Consolidated identical input bits for $mux cell $flatten\laserhead.$procmux$820:
+      Old ports: A={ 1'0 \laserhead.read_old [63:1] }, B={ 1'0 \parser.fifo.memory_r_data [63:1] }, Y=$flatten\laserhead.$procmux$820_Y
+      New ports: A=\laserhead.read_old [63:1], B=\parser.fifo.memory_r_data [63:1], Y=$flatten\laserhead.$procmux$820_Y [62:0]
+      New connections: $flatten\laserhead.$procmux$820_Y [63] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1478:
+      Old ports: A=3'001, B=3'100, Y=$flatten\parser.$procmux$1478_Y
+      New ports: A=2'01, B=2'10, Y={ $flatten\parser.$procmux$1478_Y [2] $flatten\parser.$procmux$1478_Y [0] }
+      New connections: $flatten\parser.$procmux$1478_Y [1] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1483:
+      Old ports: A=2'01, B=2'11, Y=$auto$wreduce.cc:454:run$2447 [1:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:454:run$2447 [1]
+      New connections: $auto$wreduce.cc:454:run$2447 [0] = 1'1
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1485:
+      Old ports: A=3'011, B={ 1'0 $auto$wreduce.cc:454:run$2447 [1:0] }, Y=$flatten\parser.$procmux$1485_Y
+      New ports: A=2'11, B=$auto$wreduce.cc:454:run$2447 [1:0], Y=$flatten\parser.$procmux$1485_Y [1:0]
+      New connections: $flatten\parser.$procmux$1485_Y [2] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1497:
+      Old ports: A=3'001, B={ 1'0 $auto$wreduce.cc:454:run$2448 [1:0] }, Y=$flatten\parser.$procmux$1497_Y
+      New ports: A=2'01, B=$auto$wreduce.cc:454:run$2448 [1:0], Y=$flatten\parser.$procmux$1497_Y [1:0]
+      New connections: $flatten\parser.$procmux$1497_Y [2] = 1'0
+  Optimizing cells in module \top.
+    Consolidated identical input bits for $mux cell $flatten\laserhead.$procmux$1181:
+      Old ports: A=$flatten\laserhead.$procmux$1177_Y, B=3'001, Y=$flatten\laserhead.$procmux$1181_Y
+      New ports: A={ 1'1 $flatten\laserhead.$procmux$1177_Y [0] }, B=2'01, Y={ $flatten\laserhead.$procmux$1181_Y [2] $flatten\laserhead.$procmux$1181_Y [0] }
+      New connections: $flatten\laserhead.$procmux$1181_Y [1] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1485:
+      Old ports: A=2'11, B=$auto$wreduce.cc:454:run$2447 [1:0], Y=$flatten\parser.$procmux$1485_Y [1:0]
+      New ports: A=1'1, B=$auto$wreduce.cc:454:run$2447 [1], Y=$flatten\parser.$procmux$1485_Y [1]
+      New connections: $flatten\parser.$procmux$1485_Y [0] = 1'1
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1499:
+      Old ports: A=$flatten\parser.$procmux$1497_Y, B=3'001, Y=$flatten\parser.$procmux$1499_Y
+      New ports: A=$flatten\parser.$procmux$1497_Y [1:0], B=2'01, Y=$flatten\parser.$procmux$1499_Y [1:0]
+      New connections: $flatten\parser.$procmux$1499_Y [2] = 1'0
+  Optimizing cells in module \top.
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1501:
+      Old ports: A=$flatten\parser.$procmux$1499_Y, B=3'001, Y=$flatten\parser.$procmux$1501_Y
+      New ports: A=$flatten\parser.$procmux$1499_Y [1:0], B=2'01, Y=$flatten\parser.$procmux$1501_Y [1:0]
+      New connections: $flatten\parser.$procmux$1501_Y [2] = 1'0
+  Optimizing cells in module \top.
+    Consolidated identical input bits for $mux cell $flatten\parser.$procmux$1503:
+      Old ports: A=$flatten\parser.$procmux$1501_Y, B=3'001, Y=$flatten\parser.$procmux$1503_Y
+      New ports: A=$flatten\parser.$procmux$1501_Y [1:0], B=2'01, Y=$flatten\parser.$procmux$1503_Y [1:0]
+      New connections: $flatten\parser.$procmux$1503_Y [2] = 1'0
+  Optimizing cells in module \top.
+Performed a total of 15 changes.
+
+2.29.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.29.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.29.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.29.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.29.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.29.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~64 debug messages>
+
+2.29.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.29.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.29.13. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 63 on $auto$ff.cc:262:slice$2048 ($sdffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:262:slice$2202 ($sdffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:262:slice$2202 ($sdffe) from module top.
+Setting constant 0-bit at position 17 on $auto$ff.cc:262:slice$2202 ($sdffe) from module top.
+Setting constant 0-bit at position 20 on $auto$ff.cc:262:slice$2202 ($sdffe) from module top.
+Setting constant 0-bit at position 21 on $auto$ff.cc:262:slice$2202 ($sdffe) from module top.
+
+2.29.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.29.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.29.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.29.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~64 debug messages>
+
+2.29.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.29.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.29.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.29.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.29.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.29.23. Finished OPT passes. (There is nothing left to do.)
+
+2.30. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+2.31. Executing TECHMAP pass (map to technology primitives).
+
+2.31.1. Executing Verilog-2005 frontend: /share/techmap.v
+Parsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.31.2. Executing Verilog-2005 frontend: /share/ice40/arith_map.v
+Parsing Verilog input from `/share/ice40/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+2.31.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$418b3362398720b4895d059a3023f969a4cb1c02\_80_ice40_alu for cells of type $alu.
+Using template $paramod$a745ba1b920b898829c997ce763d14e269b8a8f2\_80_ice40_alu for cells of type $alu.
+Using template $paramod$2f5fb04daf2da94d981bf9455fa4454c6ec8b705\_80_ice40_alu for cells of type $alu.
+Using template $paramod$614d3d9a9b23e7c97ba78b9c702f30c352d205a6\_80_ice40_alu for cells of type $alu.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$d31bf4d7d72e59528d18fbd4f322e9d608532043\_90_pmux for cells of type $pmux.
+Using template $paramod$53700bbee849b2010ad0b60a61ccd204a10e24ca\_80_ice40_alu for cells of type $alu.
+Using template $paramod$754650b284649a026620fc6856e5b6886cbfe794\_80_ice40_alu for cells of type $alu.
+Using template $paramod$fd7bfb1a4f3a7c2ac1a35670d0fa64ccc7b91841\_80_ice40_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc.
+  add \polynomal_$signal$9 (26 bits, signed)
+  add { $flatten\polynomal.$signal$12 [38:26] \polynomal_$signal $flatten\polynomal.$signal$12 [24:0] } (39 bits, signed)
+  add $flatten\polynomal.$signal$57 (39 bits, signed)
+  add \polynomal_$signal$8 (26 bits, signed)
+  add \polynomal_$signal$13 (26 bits, signed)
+  add { $flatten\polynomal.$signal$14 [38:26] \polynomal_$signal$6 $flatten\polynomal.$signal$14 [24:0] } (39 bits, signed)
+  add $flatten\polynomal.$signal$127 (39 bits, signed)
+  add \polynomal_$signal$12 (26 bits, signed)
+Using template $paramod$d2fa05d38998afabc6d4f34471305d0af4b8b2df\_80_ice40_alu for cells of type $alu.
+Using template $paramod$4bdb94ac02745db6fc41e2e497d9b9793cd51dc6\_80_ice40_alu for cells of type $alu.
+Using template $paramod$94ee0ee7512ee84ddf89a50b9179e5ffb2c3207c\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod$b756e651b7db7aeb455331d9a2df073db93fcc2e\_90_pmux for cells of type $pmux.
+Using template $paramod$56f7ce6d87f8add68ca646dc02d7695a3189f8e5\_90_pmux for cells of type $pmux.
+Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_80_ice40_alu for cells of type $alu.
+Using template $paramod$85df5dc01c7df96a7d8e5f1fdf76ce9ac452af63\_90_pmux for cells of type $pmux.
+Using template $paramod$54a4503cc57b9df40b70c1899504d6aac2650719\_90_pmux for cells of type $pmux.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_80_ice40_alu for cells of type $alu.
+Using template $paramod$2780480d52179e2db572a6e5133edf36e733d32e\_80_ice40_alu for cells of type $alu.
+Using template $paramod$fa8d9e4c2749d63ae521a69564d54ead1ad1232d\_80_ice40_alu for cells of type $alu.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_80_ice40_alu for cells of type $alu.
+Using template $paramod$713617589782cfade849bb573b5c36106c4b708f\_80_ice40_alu for cells of type $alu.
+  add \polynomal_$signal$11 (26 bits, signed)
+  add { $flatten\polynomal.$signal$13 [38:26] \polynomal_$signal$4 $flatten\polynomal.$signal$13 [24:0] } (39 bits, signed)
+  add $flatten\polynomal.$signal$92 (39 bits, signed)
+  add \polynomal_$signal$10 (26 bits, signed)
+Using template $paramod$b016129edba87ad27a7393da6fa50baa1808cfd8\_80_ice40_alu for cells of type $alu.
+Using template $paramod$dbcdc7e8aa1a4080cea2deda6fdc8772064f4d90\_80_ice40_alu for cells of type $alu.
+  sub \parser.fifo.current_write_pointer (9 bits, unsigned)
+  add \parser.fifo.committed_read_pointer (9 bits, unsigned)
+  add 9'100000000 (9 bits, unsigned)
+Using template $paramod$5a2ca5882e9dca4f8f1bbd81c418bd460ad92209\_80_ice40_alu for cells of type $alu.
+Using template $paramod$091610cd349a68bd5539cffd7126f0d76e9bca00\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $lut.
+  add \parser.fifo.committed_read_pointer (9 bits, unsigned)
+  sub \parser.fifo.current_write_pointer (9 bits, unsigned)
+  add 9'111111111 (9 bits, unsigned)
+Using template $paramod$a285b5a57fe61eabc57c91b8c412748ee1151a85\_90_pmux for cells of type $pmux.
+Using template $paramod$c6885379b74fbbf6906b35106e386e521d86cbb2\_80_ice40_alu for cells of type $alu.
+Using template $paramod$5a6f3fedab454736e8ecd4fc56159f9859cd2cfb\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $dffe.
+Using template $paramod$ea402187f386206c0840504755479bf827f47707\_80_ice40_alu for cells of type $alu.
+Using template $paramod$5de419421922dae11218a2e78ba90599a9b752bd\_80_ice40_alu for cells of type $alu.
+Using template $paramod$65216b304e0e600b68271885889e654586c4a1b6\_80_ice40_alu for cells of type $alu.
+Using template $paramod$57bf76e00c3430ff419b4b8efc81ad2e7bd8e937\_80_ice40_alu for cells of type $alu.
+Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_80_ice40_alu for cells of type $alu.
+Using template $paramod$215440792383f7884e57d9c95f84e9552d0bf4ac\_80_ice40_alu for cells of type $alu.
+Using template $paramod$10ed987432f06055e5279101f9ec60a49861b43c\_80_ice40_alu for cells of type $alu.
+Using template $paramod$4868d58a04723871777326409a611fa912defcd8\_80_ice40_alu for cells of type $alu.
+Using template $paramod$32efbfac1c4dc57230cf86180788fdfd12e3b511\_80_ice40_alu for cells of type $alu.
+Using template $paramod$12350b8c8422a70d10b7db4eaae1202a7148b784\_80_ice40_alu for cells of type $alu.
+Using template $paramod$9e1d7f96de24dbd2acf0c979810d5b526e07d8ad\_80_ice40_alu for cells of type $alu.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using template $paramod$93b49458bab1c00eb32aff458c583f46ff61e60f\_80_ice40_alu for cells of type $alu.
+Using template $paramod$950cc9f9d9b07c09d0ee4a231126f2c8a3c4f78a\_80_ice40_alu for cells of type $alu.
+Using template $paramod$103b4016182df467cceab67bcf3e18e6361ec0fd\_80_ice40_alu for cells of type $alu.
+Using template $paramod$9aa1dd3e3f148818dd239a30b44938d8d4bd6da1\_80_ice40_alu for cells of type $alu.
+Using template $paramod$356a43159ec29b0d8ec2cf3fdd8ed8f1e0111ae6\_80_ice40_alu for cells of type $alu.
+Using template $paramod$c6b63e723603573fdc33dc74600fd0455fbbc6dc\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100111 for cells of type $fa.
+Using template $paramod$9c7d13c1edbd4d27a85edb6208279a64037aa7b0\_80_ice40_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001001 for cells of type $fa.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~2361 debug messages>
+
+2.32. Executing OPT pass (performing simple optimizations).
+
+2.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~4995 debug messages>
+
+2.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~2775 debug messages>
+Removed a total of 925 cells.
+
+2.32.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 791 unused cells and 2585 unused wires.
+<suppressed ~793 debug messages>
+
+2.32.5. Finished fast OPT passes.
+
+2.33. Executing ICE40_OPT pass (performing simple optimizations).
+
+2.33.1. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2518.slice[0].carry: CO=\prism_driver.duty [3]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2523.slice[0].carry: CO=\prism_driver.timer [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2536.slice[0].carry: CO=\prism_driver.delay [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2541.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2541.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2596.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2596.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2607.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2596.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2627.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2627.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2640.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2640.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2651.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2640.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2665.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2665.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2674.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2674.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2683.slice[0].carry: CO=\laserhead.scanbit [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2705.slice[0].carry: CO=\laserhead.tickcounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2716.slice[0].carry: CO=\laserhead.photodiodecnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2721.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2665.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2726.slice[0].carry: CO=\parser_$signal$1 [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2733.slice[0].carry: CO=\parser_$signal$1 [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2746.slice[0].carry: CO=\parser_$signal [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2753.slice[0].carry: CO=\parser_$signal [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2766.slice[0].carry: CO=\parser_$signal$2 [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2773.slice[0].carry: CO=\parser_$signal$2 [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2786.slice[0].carry: CO=\parser_$signal$1 [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2789.slice[0].carry: CO=\parser_$signal$1 [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2792.slice[0].carry: CO=\parser_$signal$2 [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2795.slice[0].carry: CO=\parser_$signal$2 [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2798.slice[0].carry: CO=\coeffcnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2801.slice[0].carry: CO=\parser_$signal [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2804.slice[0].carry: CO=\parser_$signal [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2807.slice[0].carry: CO=\cd_sync.timer [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2810.slice[0].carry: CO=\laserhead.tickcounter [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2813.slice[0].carry: CO=\laserhead.readbit [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2816.slice[0].carry: CO=\laserhead.scanbit [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2819.slice[0].carry: CO=\laserhead.lasercnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2822.slice[0].carry: CO=\laserhead.stepcnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2825.slice[0].carry: CO=\laserhead.photodiodecnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2831.slice[0].carry: CO=\parser.wordsreceived [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2834.slice[0].carry: CO=\parser.fifo.current_write_pointer [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2837.slice[0].carry: CO=\parser.fifo.current_read_pointer [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2840.slice[0].carry: CO=\prism_driver.duty [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2843.slice[0].carry: CO=\prism_driver.timer [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2846.slice[0].carry: CO=\parser.interf.bit_count [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2852.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$2513.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2861.slice[0].carry: CO=\prism_driver.delay [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2864.slice[0].carry: CO=\prism_driver.delay [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2870.slice[0].carry: CO=\polynomal.ticks [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2873.slice[0].carry: CO=\polynomal.cntr [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$maccmap.cc:240:synth$4880.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$maccmap.cc:240:synth$4890.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$maccmap.cc:240:synth$7302.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$maccmap.cc:240:synth$7320.slice[0].carry: CO=1'0
+
+2.33.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~237 debug messages>
+
+2.33.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+2.33.4. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:262:slice$7115 ($_SDFFE_PN0P_) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:262:slice$8064 ($_SDFFE_PN0P_) from module top.
+
+2.33.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 21 unused cells and 7 unused wires.
+<suppressed ~22 debug messages>
+
+2.33.6. Rerunning OPT passes. (Removed registers in this run.)
+
+2.33.7. Running ICE40 specific optimizations.
+
+2.33.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~11 debug messages>
+
+2.33.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.33.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.33.12. Rerunning OPT passes. (Removed registers in this run.)
+
+2.33.13. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2513.slice[0].carry: CO=1'1
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2852.slice[1].carry: CO=1'1
+
+2.33.14. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.33.15. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.33.16. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 2 unused cells and 0 unused wires.
+<suppressed ~2 debug messages>
+
+2.33.18. Rerunning OPT passes. (Removed registers in this run.)
+
+2.33.19. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$2852.slice[2].carry: CO=$auto$alumacc.cc:485:replace_alu$2513.BB [2]
+
+2.33.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.33.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.33.22. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 0 unused wires.
+<suppressed ~1 debug messages>
+
+2.33.24. Rerunning OPT passes. (Removed registers in this run.)
+
+2.33.25. Running ICE40 specific optimizations.
+
+2.33.26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.33.27. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.33.28. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.33.30. Finished OPT passes. (There is nothing left to do.)
+
+2.34. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+2.35. Executing TECHMAP pass (map to technology primitives).
+
+2.35.1. Executing Verilog-2005 frontend: /share/ice40/ff_map.v
+Parsing Verilog input from `/share/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+2.35.2. Continuing TECHMAP pass.
+Using template \$_SDFFCE_PP0P_ for cells of type $_SDFFCE_PP0P_.
+Using template \$_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template \$_DFF_P_ for cells of type $_DFF_P_.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+No more expansions possible.
+<suppressed ~1445 debug messages>
+
+2.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~1 debug messages>
+
+2.37. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2786.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2789.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2792.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2795.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2798.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2801.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2804.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2807.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2810.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2813.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2816.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2819.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2822.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2825.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2831.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2834.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2837.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2840.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2843.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2846.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2861.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2864.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2870.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$2873.slice[0].carry ($lut).
+Mapping top.$auto$maccmap.cc:240:synth$4880.slice[0].carry ($lut).
+Mapping top.$auto$maccmap.cc:240:synth$4890.slice[0].carry ($lut).
+Mapping top.$auto$maccmap.cc:240:synth$7302.slice[0].carry ($lut).
+Mapping top.$auto$maccmap.cc:240:synth$7320.slice[0].carry ($lut).
+
+2.38. Executing ICE40_OPT pass (performing simple optimizations).
+
+2.38.1. Running ICE40 specific optimizations.
+
+2.38.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~658 debug messages>
+
+2.38.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~6849 debug messages>
+Removed a total of 2283 cells.
+
+2.38.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.38.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 4 unused cells and 10631 unused wires.
+<suppressed ~5 debug messages>
+
+2.38.6. Rerunning OPT passes. (Removed registers in this run.)
+
+2.38.7. Running ICE40 specific optimizations.
+
+2.38.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~3 debug messages>
+
+2.38.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.38.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.38.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.38.12. Rerunning OPT passes. (Removed registers in this run.)
+
+2.38.13. Running ICE40 specific optimizations.
+
+2.38.14. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.38.15. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.38.16. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.38.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.38.18. Finished OPT passes. (There is nothing left to do.)
+
+2.39. Executing TECHMAP pass (map to technology primitives).
+
+2.39.1. Executing Verilog-2005 frontend: /share/ice40/latches_map.v
+Parsing Verilog input from `/share/ice40/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+2.39.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.40. Executing ABC pass (technology mapping using ABC).
+
+2.40.1. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
+Extracted 4463 gates and 6497 wires to a netlist network with 2032 inputs and 1355 outputs.
+
+2.40.1.1. Executing ABC.
